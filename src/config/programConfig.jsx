@@ -96,7 +96,7 @@ export const desktopItems = [
         iconSrc: logoIcon,
         type: "icon",
         isMaximizable: false,
-        link: "https://minhkhoin3913.github.io/retro-homepage/",
+        link: "https://khonloi.github.io/retro-homepage/",
       },
     ],
   },
@@ -120,6 +120,7 @@ export const desktopItems = [
     iconSrc: logoIcon,
     type: "icon",
     isMaximizable: false,
+    startup: true,
   },
   {
     id: "programs",

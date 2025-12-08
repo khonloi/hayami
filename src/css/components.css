@@ -16,12 +16,6 @@
   border-top: 2px solid var(--button-border-dark);
 }
 
-/* Common selection styling */
-.selected {
-  background-color: var(--windows-blue);
-  color: var(--windows-white);
-}
-
 /* Common scrollbar styling */
 .retro-scrollbar::-webkit-scrollbar {
   width: 16px;

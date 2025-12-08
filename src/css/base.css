@@ -5,7 +5,11 @@ body {
   #926FBE, /* Middle */
   #E79AF2  /* Bottom */
 );
+  cursor: var(--cursor-arrow);
+}
 
+html {
+  cursor: var(--cursor-arrow);
 }
 
 /* Global font settings */
@@ -24,5 +28,5 @@ textarea {
 }
 
 a, a:link, a:visited, .draggable, .dragging, .moveable, .draggable-item, button {
-  cursor: url('/src/assets/cursors/default_link.cur'), pointer;
+  cursor: var(--cursor-link);
 }

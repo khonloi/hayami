@@ -20,6 +20,7 @@
   --button-border-dark: #808080;
   --button-border-light: #fcfcfc;
   --windows-blue: #316ac5;
+  --windows-yellow: #ffff96;
   --windows-bg: #c0c0c0;
   --windows-white: #ffffff;
   --windows-black: #000000;
@@ -28,6 +29,11 @@
   --scrollbar-thumb-hover: #e0e0e0;
   --scrollbar-thumb-active: #a0a0a0;
   --body-bg: linear-gradient(to bottom, #6d45b0, #f5a7ff);
+  /* Cursor variables - will be set by JavaScript */
+  --cursor-arrow: auto;
+  --cursor-link: pointer;
+  --cursor-wait: wait;
+  --cursor-busy: wait;
 }
 
 :root.dark {

@@ -28,7 +28,7 @@ const ShutdownDialog = ({ isVisible, onClose, onShutdown }) => {
         <div className="shutdown-dialog-content">
           <p>
             <img src={monitorMoonIcon} alt="Monitor Moon Icon" className="dialog-icon" />
-            Do you want to end your Pane session?
+            Do you want to end your Pane?
           </p>
           <div className="shutdown-dialog-buttons">
             <button className="window-button program-button" onClick={handleOK}>

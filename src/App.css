@@ -1,5 +1,5 @@
 .App {
-  cursor: url('/src/assets/cursors/default_arrow.cur'), auto;
+  cursor: var(--cursor-arrow);
 }
 
 .App.fullscreen {
@@ -14,6 +14,7 @@
   max-width: 100%;
   margin: 0;
   padding: 0;
+  cursor: var(--cursor-arrow);
 }
 
 .logo {

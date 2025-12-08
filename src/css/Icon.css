@@ -8,21 +8,13 @@
   outline: none;
   transition: none;
 }
-
-.windows-icon.selected {
-  background-color: var(--windows-blue);
-  color: var(--windows-white);
-}
-
 .windows-icon.selected .item-label {
-  color: var(--windows-white) !important;
-  background-color: transparent;
+  color: var(--windows-black) !important;
+  background-color: var(--windows-yellow);
 }
-
 .item-image {
   height: 48px;
 }
-
 .item-image img {
   width: 100%;
   height: 100%;
@@ -32,25 +24,23 @@
   image-rendering: crisp-edges;
   pointer-events: none;
 }
-
 .item-label {
   font-size: 14px;
   text-align: center;
-  margin-top: 8px;
+  margin-top: 4px;
   color: var(--windows-white);
   font-family: var(--main-font);
   pointer-events: none;
   word-wrap: break-word;
+  line-height: 1.2;
 }
-
-/* Touch-friendly improvements */
+/* Touch-friendly improvements /
 @media (max-width: 768px) {
-  .windows-icon {
-    touch-action: none; /* Prevent browser handling of touch gestures */
-  }
+.windows-icon {
+touch-action: none; / Prevent browser handling of touch gestures */
 
-  .windows-icon .item-label {
-    font-size: 14px;
-    max-width: 5rem; /* Wider label area for touch */
-  }
+.windows-icon .item-label {
+  font-size: 14px;
+  max-width: 5rem; /* Wider label area for touch */
+  padding: 2px 5px;
 }

@@ -5,7 +5,7 @@
 }
 
 .skills-pane {
-  background-color: #efefef;
+  background-color: #ededed;
   border-right: 2px solid var(--button-border-dark);
   padding: 14px;
   overflow-y: auto;
@@ -19,7 +19,7 @@
 .skills-section-title {
   font-weight: bold;
   color: var(--windows-blue);
-  cursor: url("/src/assets/cursors/default_link.cur"), pointer;
+  cursor: var(--cursor-link);
   display: flex;
   gap: 8px;
 }
@@ -129,7 +129,7 @@
 .education-box {
   border: 1px solid var(--button-border-dark);
   padding: 14px;
-  background-color: #f9f9f9;
+  background-color: #f6f6f6;
   margin-bottom: 16px; /* Added margin between education boxes */
 }
 

@@ -42,8 +42,8 @@ const Contact = () => {
                     <img src={globeIcon} alt="Website" className="folder-icon" /> Website:
                 </strong>{" "}
                 <span className="contact-detail">
-                    <a href="https://minhkhoin3913.github.io/retro-homepage" className="contact-link">
-                        https://minhkhoin3913.github.io/retro-homepage
+                    <a href="https://khonloi.github.io/retro-homepage" className="contact-link">
+                        https://khonloi.github.io/retro-homepage
                     </a>
                 </span>
             </p>

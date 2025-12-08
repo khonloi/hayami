@@ -13,11 +13,11 @@
 }
 
 .desktop.loading {
-  cursor: url('/src/assets/cursors/default_wait.cur'), wait;
+  cursor: var(--cursor-wait);
 }
 
 .desktop.delaying {
-  cursor: url('/src/assets/cursors/default_busy.cur'), wait;
+  cursor: var(--cursor-busy);
 }
 
 .desktop.shutting-down {

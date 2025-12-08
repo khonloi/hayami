@@ -15,7 +15,7 @@ export const useDesktop = () => {
     
     // Constants for positioning
     const EDGE_PADDING = 20; // Consistent padding from edges
-    const ICON_SPACING = 96; // Vertical spacing between icons
+    const ICON_SPACING = 94; // Vertical spacing between icons
     const ICON_WIDTH = 80; // Width of icon from CSS
     const TOP_PADDING = 16; // Exact padding from the top of the menu bar
     

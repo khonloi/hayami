@@ -1,5 +1,6 @@
 // src/hooks/useLoadingScreen.js
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { getCursorStyle } from '../utilities/cursors';
 
 export const useLoadingScreen = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,6 +27,9 @@ export const useLoadingScreen = () => {
     setIsLoading(false);
     setIsDelaying(false);
     setMenuBarVisible(true);
+    
+    // Restore cursor when skipping
+    document.body.style.cursor = getCursorStyle('arrow');
     
     // Play startup sound
     playStartupSound();
@@ -158,6 +162,9 @@ export const useLoadingScreen = () => {
             // After 2 seconds delay, show desktop
             setTimeout(() => {
               setIsDelaying(false);
+              
+              // Restore cursor when loading sequence is completely done
+              document.body.style.cursor = getCursorStyle('arrow');
               
               // Add a delay before showing the menu bar
               setTimeout(() => {

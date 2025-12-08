@@ -1,12 +1,18 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import Desktop from './components/Desktop';
 // import ScreensaverManager from './components/ScreensaverManager';
+import { setCursorVariables } from './utilities/cursors';
 import './App.css';
 import './css/base.css';
 import './css/Desktop.css';
 
 function App() {
   const [isFullScreen, setIsFullScreen] = useState(false);
+
+  // Initialize cursor variables on mount
+  useEffect(() => {
+    setCursorVariables();
+  }, []);
 
   const handleFullScreenChange = useCallback((isFullScreenActive) => {
     setIsFullScreen(isFullScreenActive);

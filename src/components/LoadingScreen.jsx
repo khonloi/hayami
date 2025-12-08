@@ -3,6 +3,7 @@ import "../css/variables.css";
 import "../css/base.css";
 import "../css/components.css";
 import "../css/LoadingScreen.css";
+import { getCursorStyle } from "../utilities/cursors";
 import startupCard from "../assets/images/startup-card-1.png";
 
 const LoadingScreen = ({ progress: initialProgress, onSkip }) => {
@@ -25,10 +26,6 @@ const LoadingScreen = ({ progress: initialProgress, onSkip }) => {
     document.body.style.cursor = "none";
   };
 
-  const restoreCursor = () => {
-    document.body.style.cursor = "auto";
-  };
-
   useEffect(() => {
     const handleKeyPress = (event) => {
       if (event.key === "Escape") {
@@ -49,6 +46,7 @@ const LoadingScreen = ({ progress: initialProgress, onSkip }) => {
       lastTapRef.current = currentTime;
     };
 
+    // Hide cursor when component mounts and keep it hidden
     hideCursor();
     document.addEventListener("keydown", handleKeyPress);
     document.addEventListener("touchstart", handleTouchStart, { passive: false });
@@ -56,7 +54,7 @@ const LoadingScreen = ({ progress: initialProgress, onSkip }) => {
     return () => {
       document.removeEventListener("keydown", handleKeyPress);
       document.removeEventListener("touchstart", handleTouchStart);
-      restoreCursor();
+      // Don't restore cursor here - it will be restored when loading is completely done
     };
   }, [onSkip]);
 

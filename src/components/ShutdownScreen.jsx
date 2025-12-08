@@ -3,6 +3,7 @@ import "../css/variables.css";
 import "../css/base.css";
 import "../css/components.css";
 import "../css/LoadingScreen.css";
+import { getCursorStyle } from "../utilities/cursors";
 import startupCard from "../assets/images/startup-card-1.png";
 
 const ShutdownScreen = () => {
@@ -20,7 +21,7 @@ const ShutdownScreen = () => {
 
   // Function to restore cursor
   const restoreCursor = () => {
-    document.body.style.cursor = 'auto';
+    document.body.style.cursor = getCursorStyle('arrow');
   };
 
   // Handle Enter key press to restart and cursor hiding

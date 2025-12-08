@@ -1,22 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./welcome.css";
-import welcomeAudio from "./welcome.mp3";
 
 const Welcome = () => {
   const [activeSection, setActiveSection] = useState("welcome");
   const [content, setContent] = useState("");
-
-  useEffect(() => {
-    const audio = new Audio(welcomeAudio);
-    audio.play().catch((error) => {
-      console.error("Error playing audio:", error);
-    });
-
-    return () => {
-      audio.pause();
-      audio.currentTime = 0;
-    };
-  }, []);
 
   useEffect(() => {
     switch (activeSection) {

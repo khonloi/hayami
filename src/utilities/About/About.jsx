@@ -134,7 +134,7 @@ const About = () => {
                 </li>
                 <li>
                   <img src={docIcon} alt="Document" className="folder-icon" />{" "}
-                  Swagger
+                  Postman
                 </li>
               </ul>
             )}
@@ -182,15 +182,12 @@ const About = () => {
       {/* Right Pane - Main Content */}
       <div className="main-content">
         <div className="header">
-          <img
-            src={portraitImage}
-            alt="Portrait"
-            className="portrait-image"
-          />
+          <img src={portraitImage} alt="Portrait" className="portrait-image" />
           <div className="header-group">
             <h2 className="name">Nguyen Minh Khoi</h2>
             <p className="title">Full Stack Developer</p>
           </div>
+          <button className="window-button program-button" style={{ marginLeft: 'auto' }}>Export</button>
         </div>
 
         <div className="section">
@@ -224,9 +221,10 @@ const About = () => {
                   Methodologies
                 </li>
                 <li>
-                  <strong>Academic Projects: </strong> Built a full-stack
-                  e-commerce app with React and Node.js, featuring authentication, product
-                  management, and real-time order tracking via Firebase.
+                  <strong>Academic Project: </strong> Led a team in developing a
+                  full-stack e-commerce application using React and Node.js,
+                  featuring secure authentication, product management,
+                  and real-time order tracking powered by Firebase.
                 </li>
               </ul>
             </div>

@@ -23,24 +23,28 @@ import { desktopItems, renderWindowContent } from "../config/programConfig";
 
 const Desktop = memo(({ onFullScreenChange }) => {
   const { openWindows, openWindow, closeWindow, focusWindow } = useWindow();
-  const { allDesktopItems, itemPositions, handleItemPositionChange } = useDesktop();
-  const { isLoading, isDelaying, progress, menuBarVisible, skipLoading } = useLoadingScreen();
-  const { 
-    minimizedWindows, 
-    loadingWindows, 
+  const { allDesktopItems, itemPositions, handleItemPositionChange } =
+    useDesktop();
+  const { isLoading, isDelaying, progress, menuBarVisible, skipLoading } =
+    useLoadingScreen();
+  const {
+    minimizedWindows,
+    loadingWindows,
     handleItemDoubleClick: handleItemDoubleClickBase,
     handleMinimizeWindow,
     handleRestoreWindow: handleRestoreWindowBase,
-    handleCloseWindow: handleCloseWindowBase
+    handleCloseWindow: handleCloseWindowBase,
   } = useWindowManager();
   const { isShuttingDown, shutdownStage, startShutdown } = useShutdown();
 
   const [selectedIcon, setSelectedIcon] = useState(null);
   const [isTaskbarCollapsed, setIsTaskbarCollapsed] = useState(false);
-  const [windowLoadingStates, setWindowLoadingStates] = useState({}); // Track loading state of each window
+  const [windowLoadingStates, setWindowLoadingStates] = useState({});
+  const [hasStarted, setHasStarted] = useState(false);
+  // Track loading state of each window
 
   const playTaskbarSound = useCallback(async (soundType) => {
-    const baseUrl = import.meta.env.BASE_URL || '/';
+    const baseUrl = import.meta.env.BASE_URL || "/";
     const audioSources = [
       `${baseUrl}sounds/${soundType}.mp3`,
       `/sounds/${soundType}.mp3`,
@@ -49,18 +53,18 @@ const Desktop = memo(({ onFullScreenChange }) => {
 
     const audio = new Audio();
     audio.volume = 0.7;
-    
+
     for (const source of audioSources) {
       try {
         console.log(`Attempting to play ${soundType} audio from: ${source}`);
         audio.src = source;
-        
+
         await new Promise((resolve, reject) => {
           audio.oncanplaythrough = resolve;
           audio.onerror = reject;
           audio.load();
         });
-        
+
         const playPromise = audio.play();
         if (playPromise !== undefined) {
           await playPromise;
@@ -68,29 +72,47 @@ const Desktop = memo(({ onFullScreenChange }) => {
           return;
         }
       } catch (error) {
-        console.warn(`Failed to play ${soundType} audio from ${source}:`, error);
+        console.warn(
+          `Failed to play ${soundType} audio from ${source}:`,
+          error
+        );
       }
     }
-    
+
     console.error(`All ${soundType} audio sources failed to play`);
   }, []);
 
-  const handleItemDoubleClick = useCallback((id, label) => {
-    handleItemDoubleClickBase(id, label, openWindows, openWindow, focusWindow);
-  }, [handleItemDoubleClickBase, openWindows, openWindow, focusWindow]);
+  const handleItemDoubleClick = useCallback(
+    (id, label) => {
+      handleItemDoubleClickBase(
+        id,
+        label,
+        openWindows,
+        openWindow,
+        focusWindow
+      );
+    },
+    [handleItemDoubleClickBase, openWindows, openWindow, focusWindow]
+  );
 
-  const handleRestoreWindow = useCallback((windowId) => {
-    handleRestoreWindowBase(windowId, focusWindow);
-  }, [handleRestoreWindowBase, focusWindow]);
+  const handleRestoreWindow = useCallback(
+    (windowId) => {
+      handleRestoreWindowBase(windowId, focusWindow);
+    },
+    [handleRestoreWindowBase, focusWindow]
+  );
 
-  const handleCloseWindow = useCallback((windowId) => {
-    handleCloseWindowBase(windowId, closeWindow);
-    setWindowLoadingStates(prev => {
-      const newStates = { ...prev };
-      delete newStates[windowId];
-      return newStates;
-    });
-  }, [handleCloseWindowBase, closeWindow]);
+  const handleCloseWindow = useCallback(
+    (windowId) => {
+      handleCloseWindowBase(windowId, closeWindow);
+      setWindowLoadingStates((prev) => {
+        const newStates = { ...prev };
+        delete newStates[windowId];
+        return newStates;
+      });
+    },
+    [handleCloseWindowBase, closeWindow]
+  );
 
   const handleDesktopClick = useCallback((e) => {
     if (e.target === e.currentTarget) {
@@ -105,43 +127,78 @@ const Desktop = memo(({ onFullScreenChange }) => {
   const handleToggleTaskbarCollapse = useCallback(async () => {
     const newCollapsedState = !isTaskbarCollapsed;
     setIsTaskbarCollapsed(newCollapsedState);
-    const soundType = newCollapsedState ? 'collapse' : 'expand';
+    const soundType = newCollapsedState ? "collapse" : "expand";
     await playTaskbarSound(soundType);
   }, [isTaskbarCollapsed, playTaskbarSound]);
 
-  const renderFolderContent = useCallback((folderId) => {
-    const folderData = desktopItems.find(item => item.id === folderId && item.type === "folder");
-    if (!folderData) return <div role="alert">Folder not found</div>;
+  const renderFolderContent = useCallback(
+    (folderId) => {
+      const folderData = desktopItems.find(
+        (item) => item.id === folderId && item.type === "folder"
+      );
+      if (!folderData) return <div role="alert">Folder not found</div>;
 
-    return (
-      <Explorer
-        folderId={folderId}
-        folderData={folderData}
-        onIconDoubleClick={handleItemDoubleClick}
-        onFolderDoubleClick={handleItemDoubleClick}
-        onIconPositionChange={handleItemPositionChange}
-        onFolderPositionChange={handleItemPositionChange}
-        onIconSelect={setSelectedIcon}
-        onFolderSelect={setSelectedIcon}
-        selectedItem={selectedIcon}
-      />
-    );
-  }, [handleItemDoubleClick, handleItemPositionChange, selectedIcon]);
+      return (
+        <Explorer
+          folderId={folderId}
+          folderData={folderData}
+          onIconDoubleClick={handleItemDoubleClick}
+          onFolderDoubleClick={handleItemDoubleClick}
+          onIconPositionChange={handleItemPositionChange}
+          onFolderPositionChange={handleItemPositionChange}
+          onIconSelect={setSelectedIcon}
+          onFolderSelect={setSelectedIcon}
+          selectedItem={selectedIcon}
+        />
+      );
+    },
+    [handleItemDoubleClick, handleItemPositionChange, selectedIcon]
+  );
 
   // Handle window loading state changes
-  const handleWindowLoadingChange = useCallback((windowId, isLoading) => {
-    setWindowLoadingStates(prev => ({
-      ...prev,
-      [windowId]: isLoading
-    }));
-  }, []);
+  const handleWindowLoadingChange = useCallback(
+    (windowId, isLoading) => {
+      setWindowLoadingStates((prev) => ({
+        ...prev,
+        [windowId]: isLoading,
+      }));
+    },
+    useEffect(() => {
+      if (!isLoading && !isDelaying && !hasStarted && !isShuttingDown) {
+        const startup = async () => {
+          try {
+            await playTaskbarSound("startup");
+          } catch (error) {
+            console.warn("Startup sound failed:", error);
+          }
+
+          const startups = desktopItems.filter((item) => item.startup === true);
+          for (const item of startups) {
+            handleItemDoubleClick(item.id, item.label);
+          }
+
+          setHasStarted(true);
+        };
+
+        startup();
+      }
+    }, [
+      isLoading,
+      isDelaying,
+      hasStarted,
+      isShuttingDown,
+      playTaskbarSound,
+      handleItemDoubleClick,
+    ])
+  );
 
   // Notify parent of full-screen state
   useEffect(() => {
     const hasFullScreenWindow = openWindows.some(
-      win => win.isFullScreen && 
-             !minimizedWindows.some(mw => mw.id === win.id) && 
-             windowLoadingStates[win.id] === false // Only when fully loaded
+      (win) =>
+        win.isFullScreen &&
+        !minimizedWindows.some((mw) => mw.id === win.id) &&
+        windowLoadingStates[win.id] === false // Only when fully loaded
     );
     onFullScreenChange?.(hasFullScreenWindow);
   }, [openWindows, minimizedWindows, windowLoadingStates, onFullScreenChange]);
@@ -178,23 +235,31 @@ const Desktop = memo(({ onFullScreenChange }) => {
   }
 
   const hasFullScreenWindow = openWindows.some(
-    win => win.isFullScreen && 
-           !minimizedWindows.some(mw => mw.id === win.id) && 
-           windowLoadingStates[win.id] === false
+    (win) =>
+      win.isFullScreen &&
+      !minimizedWindows.some((mw) => mw.id === win.id) &&
+      windowLoadingStates[win.id] === false
   );
 
   return (
     <>
-      {!hasFullScreenWindow && <MenuBar visible={menuBarVisible && shutdownStage === 0} onShutdown={handleShutdown} />}
+      {!hasFullScreenWindow && (
+        <MenuBar
+          visible={menuBarVisible && shutdownStage === 0}
+          onShutdown={handleShutdown}
+        />
+      )}
       <div
-        className={`desktop ${loadingWindows.size > 0 ? 'loading' : ''} ${shutdownStage === 1 ? 'shutting-down' : ''} ${hasFullScreenWindow ? 'fullscreen' : ''}`}
+        className={`desktop ${loadingWindows.size > 0 ? "loading" : ""} ${
+          shutdownStage === 1 ? "shutting-down" : ""
+        } ${hasFullScreenWindow ? "fullscreen" : ""}`}
         onClick={handleDesktopClick}
         onDragOver={(e) => e.preventDefault()}
         role="main"
         aria-label="Desktop environment"
       >
-        {allDesktopItems.map(item => {
-          const ItemComponent = item.type === 'folder' ? Folder : Icon;
+        {allDesktopItems.map((item) => {
+          const ItemComponent = item.type === "folder" ? Folder : Icon;
           return (
             <ItemComponent
               key={item.id}
@@ -206,18 +271,23 @@ const Desktop = memo(({ onFullScreenChange }) => {
               onDoubleClick={() => handleItemDoubleClick(item.id, item.label)}
               isSelected={selectedIcon === item.id}
               onSelect={setSelectedIcon}
-              aria-label={`${item.label} ${item.type === 'folder' ? 'folder' : 'application'}`}
+              aria-label={`${item.label} ${
+                item.type === "folder" ? "folder" : "application"
+              }`}
               draggable={true}
               onDragStart={(e) => {
-                e.dataTransfer.setData('text/plain', JSON.stringify({ id: item.id }));
+                e.dataTransfer.setData(
+                  "text/plain",
+                  JSON.stringify({ id: item.id })
+                );
               }}
             />
           );
         })}
 
-        {openWindows.map(win => {
-          const isMinimized = minimizedWindows.some(mw => mw.id === win.id);
-          
+        {openWindows.map((win) => {
+          const isMinimized = minimizedWindows.some((mw) => mw.id === win.id);
+
           return (
             <Window
               key={win.id}
@@ -257,6 +327,6 @@ const Desktop = memo(({ onFullScreenChange }) => {
   );
 });
 
-Desktop.displayName = 'Desktop';
+Desktop.displayName = "Desktop";
 
 export default Desktop;
