@@ -3,155 +3,271 @@ import "../css/LoadingScreen.css";
 import { getCursorStyle } from "../utilities/cursors";
 import startupCard from "../assets/images/startup-card-1.png";
 
-const LoadingScreen = ({ progress: initialProgress, onSkip }) => {
+/**
+ * Unified Loading/Shutdown Screen Component
+ * @param {Object} props
+ * @param {string} props.mode - 'loading' or 'shutdown'
+ * @param {number} props.progress - Progress percentage (0-100) for loading mode
+ * @param {Function} props.onSkip - Callback for skip action (loading mode)
+ * @param {Function} props.onComplete - Callback for completion (shutdown mode)
+ */
+const LoadingScreen = ({ 
+  mode = 'loading', 
+  progress: initialProgress, 
+  onSkip,
+  onComplete 
+}) => {
   const [stage, setStage] = useState(0);
-  const [displayedLines, setDisplayedLines] = useState([
-    "V8 JavaScript Engine v12.1, An Energy Star Ally",
-    "Copyright (C) 1984-2025, Kaison Computer, Inc. ",
-    "",
-    "⠀",
-    "",
-    "",
-    "Dependencies Check: ",
-  ]);
   const [showCursor, setShowCursor] = useState(true);
   const [progress, setProgress] = useState(0);
   const [showSkipMessage, setShowSkipMessage] = useState(true);
+  const [showRestartMessage, setShowRestartMessage] = useState(false);
   const lastTapRef = useRef(0);
 
+  // Initialize displayed lines based on mode
+  const [displayedLines, setDisplayedLines] = useState(() => {
+    if (mode === 'shutdown') {
+      return ["You can now close this browser tab "];
+    }
+    return [
+      "V8 JavaScript Engine v12.1, An Energy Star Ally",
+      "Copyright (C) 1984-2025, Kaison Computer, Inc. ",
+      "",
+      "⠀",
+      "",
+      "",
+      "Dependencies Check: ",
+    ];
+  });
+
+  // Common function to hide cursor
   const hideCursor = () => {
     document.body.style.cursor = "none";
   };
 
+  // Common function to restore cursor
+  const restoreCursor = () => {
+    document.body.style.cursor = getCursorStyle('arrow');
+  };
+
+  // Handle keyboard and touch events
   useEffect(() => {
-    const handleKeyPress = (event) => {
-      if (event.key === "Escape") {
-        onSkip?.();
-      }
-    };
-
-    const handleTouchStart = (event) => {
-      event.preventDefault();
-      const currentTime = new Date().getTime();
-      const tapLength = currentTime - lastTapRef.current;
-      console.log("Touch detected", { currentTime, lastTap: lastTapRef.current, tapLength });
-      
-      if (tapLength < 600 && tapLength > 0) {
-        console.log("Double-tap detected, onSkip:", typeof onSkip);
-        onSkip?.();
-      }
-      lastTapRef.current = currentTime;
-    };
-
-    // Hide cursor when component mounts and keep it hidden
-    hideCursor();
-    document.addEventListener("keydown", handleKeyPress);
-    document.addEventListener("touchstart", handleTouchStart, { passive: false });
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyPress);
-      document.removeEventListener("touchstart", handleTouchStart);
-      // Don't restore cursor here - it will be restored when loading is completely done
-    };
-  }, [onSkip]);
-
-  useEffect(() => {
-    try {
-      const platform = navigator.platform || "Unknown Platform";
-      const userAgent = navigator.userAgent;
-      const cpuCores = navigator.hardwareConcurrency || "Unknown";
-      let cpuInfo = "Unknown CPU";
-
-      if (userAgent.includes("Win")) {
-        const cpuMatch = userAgent.match(/(?:Intel|AMD).+?(?=;|\))/i);
-        cpuInfo = cpuMatch ? cpuMatch[0] : "x86 Compatible CPU";
-      } else if (userAgent.includes("Mac")) {
-        if (userAgent.includes("Intel")) {
-          cpuInfo = "Intel CPU";
-        } else if (userAgent.includes("Apple")) {
-          cpuInfo = "Apple Silicon";
+    if (mode === 'shutdown') {
+      const handleKeyPress = (event) => {
+        if (event.key === "Enter") {
+          window.location.reload();
         }
-      } else if (userAgent.includes("Linux")) {
-        cpuInfo = "Linux CPU";
-      } else if (userAgent.includes("Android")) {
-        cpuInfo = "ARM CPU";
-      } else if (userAgent.includes("iPhone") || userAgent.includes("iPad")) {
-        cpuInfo = "Apple CPU";
-      }
+      };
 
-      const platformLine = `${platform}(TM) Platform`;
-      const cpuLine = `${cpuInfo} with ${cpuCores} Cores`;
+      hideCursor();
+      const timer = setTimeout(() => {
+        setShowRestartMessage(true);
+        document.addEventListener("keydown", handleKeyPress);
+      }, 1000);
 
-      setDisplayedLines((prev) => {
-        const newLines = [...prev];
-        newLines[3] = platformLine;
-        newLines[4] = cpuLine;
-        return newLines;
-      });
-    } catch {
-      setDisplayedLines((prev) => {
-        const newLines = [...prev];
-        newLines[4] = "FPT Platform (TM)";
-        newLines[5] = "570GX CPU @ 1 Core";
-        return newLines;
-      });
+      return () => {
+        clearTimeout(timer);
+        document.removeEventListener("keydown", handleKeyPress);
+        restoreCursor();
+      };
+    } else {
+      // Loading mode: handle ESC and double-tap
+      const handleKeyPress = (event) => {
+        if (event.key === "Escape") {
+          onSkip?.();
+        }
+      };
+
+      const handleTouchStart = (event) => {
+        event.preventDefault();
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - lastTapRef.current;
+        
+        if (tapLength < 600 && tapLength > 0) {
+          onSkip?.();
+        }
+        lastTapRef.current = currentTime;
+      };
+
+      hideCursor();
+      document.addEventListener("keydown", handleKeyPress);
+      document.addEventListener("touchstart", handleTouchStart, { passive: false });
+
+      return () => {
+        document.removeEventListener("keydown", handleKeyPress);
+        document.removeEventListener("touchstart", handleTouchStart);
+        // Don't restore cursor here - it will be restored when loading is completely done
+      };
     }
-  }, []);
+  }, [mode, onSkip]);
 
+  // Platform detection (loading mode only)
   useEffect(() => {
-    const bootLines = [
-      "  Detecting react ... @19.1.0 ",
-      "  Detecting react-dom ... @19.1.0 ",
-      "  Detecting vite ... @6.3.5 ",
-      "  Detecting vitejs/plugin-react ... @4.4.1 ",
-      "  Detecting eslint ... @9.25.0 ",
-      "  Detecting gh-pages ... @6.3.0 ",
-      "",
-      "Starting Pane 97 ... ",
-    ];
-    const delays = [850, 650, 1200, 750, 900, 550, 1000, 800, 2000];
+    if (mode === 'loading') {
+      try {
+        const platform = navigator.platform || "Unknown Platform";
+        const userAgent = navigator.userAgent;
+        const cpuCores = navigator.hardwareConcurrency || "Unknown";
+        let cpuInfo = "Unknown CPU";
 
-    const cursorInterval = setInterval(() => {
-      setShowCursor((prev) => !prev);
-    }, 250);
+        if (userAgent.includes("Win")) {
+          const cpuMatch = userAgent.match(/(?:Intel|AMD).+?(?=;|\))/i);
+          cpuInfo = cpuMatch ? cpuMatch[0] : "x86 Compatible CPU";
+        } else if (userAgent.includes("Mac")) {
+          if (userAgent.includes("Intel")) {
+            cpuInfo = "Intel CPU";
+          } else if (userAgent.includes("Apple")) {
+            cpuInfo = "Apple Silicon";
+          }
+        } else if (userAgent.includes("Linux")) {
+          cpuInfo = "Linux CPU";
+        } else if (userAgent.includes("Android")) {
+          cpuInfo = "ARM CPU";
+        } else if (userAgent.includes("iPhone") || userAgent.includes("iPad")) {
+          cpuInfo = "Apple CPU";
+        }
 
-    let timeoutId;
-    const displayLines = async () => {
-      for (let i = 0; i < bootLines.length; i++) {
-        await new Promise((resolve) => {
-          timeoutId = setTimeout(resolve, delays[i]);
+        const platformLine = `${platform}(TM) Platform`;
+        const cpuLine = `${cpuInfo} with ${cpuCores} Cores`;
+
+        setDisplayedLines((prev) => {
+          const newLines = [...prev];
+          newLines[3] = platformLine;
+          newLines[4] = cpuLine;
+          return newLines;
         });
-        setDisplayedLines((prev) => [...prev, bootLines[i]]);
+      } catch {
+        setDisplayedLines((prev) => {
+          const newLines = [...prev];
+          newLines[4] = "FPT Platform (TM)";
+          newLines[5] = "570GX CPU @ 1 Core";
+          return newLines;
+        });
       }
-      
-      await new Promise((resolve) => {
-        timeoutId = setTimeout(resolve, 2500);
-      });
-      
-      setStage(1);
-      
-      await new Promise((resolve) => {
-        timeoutId = setTimeout(resolve, 1500);
-      });
-      
-      setProgress(0);
-      setStage(2);
-    };
+    }
+  }, [mode]);
 
-    displayLines();
-
-    return () => {
-      clearInterval(cursorInterval);
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
+  // Boot sequence animation (loading mode only)
   useEffect(() => {
-    if (stage === 2) {
+    if (mode === 'loading') {
+      const bootLines = [
+        "  Detecting react ... @19.1.0 ",
+        "  Detecting react-dom ... @19.1.0 ",
+        "  Detecting vite ... @6.3.5 ",
+        "  Detecting vitejs/plugin-react ... @4.4.1 ",
+        "  Detecting eslint ... @9.25.0 ",
+        "  Detecting gh-pages ... @6.3.0 ",
+        "",
+        "Starting Pane 97 ... ",
+      ];
+      const delays = [850, 650, 1200, 750, 900, 550, 1000, 800, 2000];
+
+      const cursorInterval = setInterval(() => {
+        setShowCursor((prev) => !prev);
+      }, 250);
+
+      let timeoutId;
+      const displayLines = async () => {
+        for (let i = 0; i < bootLines.length; i++) {
+          await new Promise((resolve) => {
+            timeoutId = setTimeout(resolve, delays[i]);
+          });
+          setDisplayedLines((prev) => [...prev, bootLines[i]]);
+        }
+        
+        await new Promise((resolve) => {
+          timeoutId = setTimeout(resolve, 2500);
+        });
+        
+        setStage(1);
+        
+        await new Promise((resolve) => {
+          timeoutId = setTimeout(resolve, 1500);
+        });
+        
+        setProgress(0);
+        setStage(2);
+      };
+
+      displayLines();
+
+      return () => {
+        clearInterval(cursorInterval);
+        clearTimeout(timeoutId);
+      };
+    }
+  }, [mode]);
+
+  // Shutdown sequence timing
+  useEffect(() => {
+    if (mode === 'shutdown') {
+      setStage(0);
+      
+      setTimeout(() => {
+        setStage(1);
+        
+        setTimeout(() => {
+          setStage(2);
+        }, 1500);
+      }, 10000);
+    }
+  }, [mode]);
+
+  // Progress update (loading mode only)
+  useEffect(() => {
+    if (mode === 'loading' && stage === 2) {
       setProgress(initialProgress);
     }
-  }, [initialProgress, stage]);
+  }, [initialProgress, stage, mode]);
 
+  // Render based on mode and stage
+  if (mode === 'shutdown') {
+    // Shutdown mode: Loading screen (stage 0)
+    if (stage === 0) {
+      return (
+        <div className="loading-screen">
+          <div className="loading-content">
+            <div className="startup-card-container">
+              <img src={startupCard} alt="Startup Card" className="startup-card" />
+            </div>
+            <div className="loading-status">
+              <p className="loading-text">Shutting down</p>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    
+    // Shutdown mode: Black screen transition (stage 1)
+    if (stage === 1) {
+      return (
+        <div className="loading-screen boot-mode">
+          <div className="boot-sequence">
+          </div>
+        </div>
+      );
+    }
+
+    // Shutdown mode: Shutdown sequence screen (stage 2)
+    return (
+      <div className="loading-screen boot-mode">
+        <div className="boot-sequence">
+          {displayedLines.map((line, index) => (
+            <div key={index} className="boot-line">
+              {line}
+            </div>
+          ))}
+          {showRestartMessage && (
+            <div className="boot-line skip-line">
+              Press Enter to restart
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // Loading mode: Boot sequence (stage 0)
   if (stage === 0) {
     return (
       <div className="loading-screen boot-mode">
@@ -176,6 +292,7 @@ const LoadingScreen = ({ progress: initialProgress, onSkip }) => {
     );
   }
   
+  // Loading mode: Transition screen (stage 1)
   if (stage === 1) {
     return (
       <div className="loading-screen boot-mode">
@@ -190,6 +307,7 @@ const LoadingScreen = ({ progress: initialProgress, onSkip }) => {
     );
   }
 
+  // Loading mode: Progress screen (stage 2)
   return (
     <div className="loading-screen">
       <div className="loading-content">

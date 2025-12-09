@@ -5,6 +5,18 @@ export const useWindow = () => {
   const [focusedWindow, setFocusedWindow] = useState(null);
   const [nextZIndex, setNextZIndex] = useState(1000);
 
+  const focusWindow = useCallback((id) => {
+    if (focusedWindow === id) return; // Already focused, no need to update
+    
+    setFocusedWindow(id);
+    setOpenWindows(prev => {
+      return prev.map(win => 
+        win.id === id ? { ...win, zIndex: nextZIndex } : win
+      );
+    });
+    setNextZIndex(prev => prev + 1);
+  }, [focusedWindow, nextZIndex]);
+
   // Memoize window operations for better performance
   const openWindow = useCallback((windowData) => {
     setOpenWindows(prev => {
@@ -16,8 +28,7 @@ export const useWindow = () => {
         return prev;
       }
 
-      // Create a new window with offset positioning
-      const offset = prev.length * 30;
+      // Mark window for centering - actual dimensions will be measured after render
       const newWindow = {
         id: windowData.id,
         title: windowData.title,
@@ -26,7 +37,7 @@ export const useWindow = () => {
         isMaximizable: windowData.isMaximizable !== false,
         isFullScreen: windowData.isFullScreen || false, // Add isFullScreen
         iconSrc: windowData.iconSrc || null,
-        initialPosition: { x: 100 + offset, y: 100 + offset },
+        initialPosition: { x: 0, y: 0, shouldCenter: true }, // Will be recalculated after render
         zIndex: nextZIndex,
       };
 
@@ -36,7 +47,7 @@ export const useWindow = () => {
       
       return [...prev, newWindow];
     });
-  }, [nextZIndex]);
+  }, [nextZIndex, focusWindow]);
 
   const closeWindow = useCallback((id) => {
     setOpenWindows(prev => {
@@ -55,18 +66,6 @@ export const useWindow = () => {
       return remainingWindows;
     });
   }, [focusedWindow]);
-
-  const focusWindow = useCallback((id) => {
-    if (focusedWindow === id) return; // Already focused, no need to update
-    
-    setFocusedWindow(id);
-    setOpenWindows(prev => {
-      return prev.map(win => 
-        win.id === id ? { ...win, zIndex: nextZIndex } : win
-      );
-    });
-    setNextZIndex(prev => prev + 1);
-  }, [focusedWindow, nextZIndex]);
 
   // Memoize the return value to prevent unnecessary re-renders
   return useMemo(() => ({

@@ -8,6 +8,10 @@
   outline: none;
   transition: none;
 }
+
+.windows-icon.image-loading {
+  visibility: hidden;
+}
 .windows-icon.selected .item-label {
   color: var(--windows-black) !important;
   background-color: var(--windows-yellow);

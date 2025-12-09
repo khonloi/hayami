@@ -18,13 +18,21 @@ const Window = memo(({
   isMaximizable = true,
   isFullScreen = false,
 }) => {
-  const [position, setPosition] = useState(initialPosition);
+  // Extract position from initialPosition (handles both {x, y} and {x, y, shouldCenter} formats)
+  const getInitialPos = (pos) => {
+    if (!pos) return { x: 100, y: 100 };
+    if (pos.shouldCenter) return { x: 0, y: 0 };
+    return { x: pos.x || 100, y: pos.y || 100 };
+  };
+  
+  const [position, setPosition] = useState(getInitialPos(initialPosition));
   const [isLoading, setIsLoading] = useState(true);
   const [isMaximized, setIsMaximized] = useState(false);
-  const [preMaximizePosition, setPreMaximizePosition] = useState(initialPosition);
+  const [preMaximizePosition, setPreMaximizePosition] = useState(getInitialPos(initialPosition));
   const [preMobileState, setPreMobileState] = useState(null);
   const [isFullScreenActive, setIsFullScreenActive] = useState(isFullScreen);
   const [touchStartTime, setTouchStartTime] = useState(null);
+  const [hasCentered, setHasCentered] = useState(false);
   const MENU_BAR_HEIGHT = 30;
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -127,6 +135,66 @@ const Window = memo(({
     return () => clearTimeout(loadingTimer);
   }, []);
 
+  // Center window after it's rendered and measured
+  useEffect(() => {
+    // Wait for loading to complete
+    if (isLoading) return;
+    
+    // On mobile, windows are automatically maximized - mark as ready immediately
+    if (isMobile) {
+      setHasCentered(true);
+      return;
+    }
+    
+    if (isMinimized || isMaximized || isFullScreenActive || hasCentered) return;
+    
+    // If window doesn't need centering, mark as ready immediately
+    if (!initialPosition || !initialPosition.shouldCenter) {
+      setHasCentered(true);
+      return;
+    }
+    
+    if (!elementRef.current) return;
+
+    // Wait for next frame to ensure window is fully rendered
+    const centerWindow = () => {
+      if (!elementRef.current) return;
+      
+      const windowElement = elementRef.current;
+      const windowRect = windowElement.getBoundingClientRect();
+      const windowWidth = windowRect.width;
+      const windowHeight = windowRect.height;
+      
+      // If dimensions are 0, wait a bit more
+      if (windowWidth === 0 || windowHeight === 0) {
+        requestAnimationFrame(centerWindow);
+        return;
+      }
+      
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      
+      // Calculate center position
+      const centerX = (viewportWidth - windowWidth) / 2;
+      // Center vertically in the available space below the menu bar
+      const availableHeight = viewportHeight - MENU_BAR_HEIGHT;
+      const centerY = MENU_BAR_HEIGHT + (availableHeight - windowHeight) / 2;
+      
+      // Ensure window stays within viewport bounds
+      const finalX = Math.max(0, Math.min(centerX, viewportWidth - windowWidth));
+      const finalY = Math.max(MENU_BAR_HEIGHT, Math.min(centerY, viewportHeight - windowHeight));
+      
+      setPosition({ x: finalX, y: finalY });
+      setPreMaximizePosition({ x: finalX, y: finalY });
+      setHasCentered(true);
+    };
+
+    // Use requestAnimationFrame to ensure DOM is ready
+    requestAnimationFrame(() => {
+      requestAnimationFrame(centerWindow);
+    });
+  }, [isLoading, isMinimized, isMaximized, isMobile, isFullScreenActive, hasCentered, initialPosition, MENU_BAR_HEIGHT]);
+
   const handleMinimizeClick = useCallback(() => {
     if (onMinimize) {
       setIsFullScreenActive(false);
@@ -209,6 +277,10 @@ const Window = memo(({
     );
   }
 
+  // Hide window until it's centered (if it needs centering and not on mobile)
+  // On mobile, windows are always maximized so don't hide them
+  const needsCentering = !isMobile && initialPosition?.shouldCenter && !hasCentered;
+  
   const windowStyle = {
     position: "absolute",
     left: isFullScreenActive ? 0 : (isMaximized || isMobile) ? 0 : `${position.x}px`,
@@ -216,6 +288,7 @@ const Window = memo(({
     width: isFullScreenActive ? "100vw" : (isMaximized || isMobile) ? "100vw" : "auto",
     height: isFullScreenActive ? "100vh" : (isMaximized || isMobile) ? `calc(100vh - ${MENU_BAR_HEIGHT}px)` : "auto",
     zIndex: isFullScreenActive ? 10000 : zIndex,
+    visibility: needsCentering ? "hidden" : "visible",
   };
 
   return (

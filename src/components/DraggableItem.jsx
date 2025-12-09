@@ -1,5 +1,5 @@
 // src/components/DraggableItem.jsx
-import React, { useState, useCallback, memo } from 'react';
+import React, { useState, useCallback, memo, useEffect, useRef } from 'react';
 import { useDragDrop } from '../hooks/useDragDrop';
 import { useContrastColor } from '../hooks/useContrastColor';
 
@@ -27,6 +27,37 @@ const DraggableItem = memo(({
   
   // State for drop target styling
   const [isDropTarget, setIsDropTarget] = useState(false);
+  
+  // State for image loading
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  
+  // Ref for the image element to check if it's already loaded (cached)
+  const imageRef = useRef(null);
+  
+  // Reset loading state when image source changes
+  const currentImageSrc = iconSrc || defaultIcon;
+  useEffect(() => {
+    setIsImageLoaded(false);
+    
+    // Check if image is already loaded from cache
+    // This handles the case where the browser loads cached images synchronously
+    // Use setTimeout to ensure the DOM has updated with the new src
+    const checkImageLoaded = () => {
+      if (imageRef.current) {
+        const img = imageRef.current;
+        // Check if image is complete (loaded from cache or already loaded)
+        if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
+          setIsImageLoaded(true);
+        }
+      }
+    };
+    
+    // Check immediately and also after a short delay to handle race conditions
+    checkImageLoaded();
+    const timeoutId = setTimeout(checkImageLoaded, 0);
+    
+    return () => clearTimeout(timeoutId);
+  }, [currentImageSrc]);
   
   // Get drag-drop functionality from hook
   const { elementRef, handleMouseDown, handleTouchStart, elementStyle } = useDragDrop(
@@ -90,18 +121,37 @@ const DraggableItem = memo(({
     setLastTap(now);
   }, [lastTap, onDoubleClick]);
 
+  // Handle image load - works for both fresh loads and cached images
+  const handleImageLoad = useCallback(() => {
+    if (imageRef.current) {
+      const img = imageRef.current;
+      // Double-check that image is actually loaded
+      if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
+        setIsImageLoaded(true);
+      }
+    } else {
+      setIsImageLoaded(true);
+    }
+  }, []);
+
   // Handle image error fallback
   const handleImageError = useCallback((e) => {
     if (defaultIcon && e.target.src !== defaultIcon) {
       e.target.src = defaultIcon;
+      // Reset loaded state when switching to fallback
+      setIsImageLoaded(false);
     }
   }, [defaultIcon]);
 
   // Consolidated props for the main div
   const itemProps = {
     ref: elementRef,
-    className: `${className} ${isSelected ? 'selected' : ''} ${isDropTarget ? 'drop-target' : ''}`,
-    style: elementStyle,
+    className: `${className} ${isSelected ? 'selected' : ''} ${isDropTarget ? 'drop-target' : ''} ${!isImageLoaded ? 'image-loading' : ''}`,
+    style: {
+      ...elementStyle,
+      visibility: isImageLoaded ? 'visible' : 'hidden',
+      opacity: isImageLoaded ? 1 : 0,
+    },
     onMouseDown: handleMouseDown,
     onTouchStart: (e) => {
       handleTouchStart(e);
@@ -126,8 +176,10 @@ const DraggableItem = memo(({
     <div {...itemProps}>
       <div className="item-image">
         <img 
+          ref={imageRef}
           src={iconSrc || defaultIcon} 
           alt={label}
+          onLoad={handleImageLoad}
           onError={handleImageError}
         />
       </div>

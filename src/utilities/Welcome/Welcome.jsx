@@ -10,26 +10,25 @@ const Welcome = () => {
       case "welcome":
         setContent(
           <>
-            <h2 className="welcome-title">Welcome to My Personal Website</h2>
+            <h2 className="welcome-title">Welcome to My Portfolio</h2>
             <p>
-              Hello! I’m thrilled to have you here. This site is a reflection of
-              my journey, passions, and creative work. A place where I share
-              projects, thoughts, and experiences. Whether you’re a friend,
-              colleague, or just curious, I hope you find something inspiring or
-              useful along the way.
+              Hello! Welcome to my retro-styled portfolio website. This is a
+              nostalgic recreation of a Windows 95/98 desktop environment,
+              built with modern web technologies. Here you can explore my work,
+              skills, and professional background in a unique and interactive way.
             </p>
             <p>
-              Feel free to explore at your own pace. You’ll find a portfolio of
-              my work, a blog with my latest musings, and even a gallery of
-              favorite moments. To get started, I recommend checking out the
-              "Discover" section for a quick overview. I’d love to hear your
-              feedback as you click around!
+              Navigate through the desktop icons to discover different sections:
+              learn about my background in "About Me", browse my projects and
+              certificates, or get in touch through the contact options. The
+              interface is designed to be both functional and fun, combining
+              retro aesthetics with modern web capabilities.
             </p>
             <p>
-              The site carries a retro aesthetic inspired by the early days of
-              computing, a nod to nostalgia and my love for technology’s
-              evolution. So grab a coffee, get comfortable, and enjoy your visit
-              to my digital home.
+              Feel free to explore at your own pace. Double-click any icon to
+              open a window, drag windows around, and interact with the desktop
+              just like you would on a classic Windows system. Check out the
+              "Discover" section for detailed navigation instructions.
             </p>
           </>
         );
@@ -39,26 +38,38 @@ const Welcome = () => {
           <>
             <h2 className="welcome-title">Discover</h2>
             <p>
-              Take a quick tour and see how to navigate my site. The interface
-              is designed to feel like a retro desktop, reimagined with modern
-              functionality. Here’s how you can interact with it:
+              This portfolio is designed as a retro Windows desktop experience.
+              Here's how to navigate and interact with the interface:
             </p>
             <ul className="welcome-usage-list">
               <li>
-                Click an icon to select it (it will highlight in blue)
+                <strong>Click</strong> an icon to select it (it will highlight in blue)
               </li>
-              <li>Double-click icons to open windows</li>
-              <li>Drag icons to rearrange them on the desktop</li>
-              <li>Drag windows by their title bar to reposition them</li>
-              <li>Click the × button to close a window</li>
-              <li>Click the • button to maximize a window</li>
-              <li>Click the • button again to restore it</li>
-              <li>Click the - button to minimize it</li>
+              <li>
+                <strong>Double-click</strong> icons to open windows and view content
+              </li>
+              <li>
+                <strong>Drag</strong> icons to rearrange them on the desktop
+              </li>
+              <li>
+                <strong>Drag</strong> windows by their title bar to reposition them
+              </li>
+              <li>
+                <strong>Click ×</strong> to close a window
+              </li>
+              <li>
+                <strong>Click •</strong> to maximize a window (click again to restore)
+              </li>
+              <li>
+                <strong>Click -</strong> to minimize a window to the taskbar
+              </li>
             </ul>
             <p>
-              Explore at your own pace—open projects, read blog posts, or browse
-              the photo gallery. Every section is here to give you a glimpse
-              into my work, my interests, and the things I enjoy sharing.
+              Explore the available sections: "About Me" for my professional
+              background and skills, "My Projects" to see my work, "My
+              Certificates" to view my achievements, and "My Contact" for ways
+              to reach out. You can also use the "Message Me" program to send me
+              a message directly.
             </p>
           </>
         );
@@ -66,27 +77,30 @@ const Welcome = () => {
       case "contact-now":
         setContent(
           <>
-            <h2 className="welcome-title">Contact Now</h2>
+            <h2 className="welcome-title">Contact</h2>
             <p>
-              I’d love to connect with you! This section is your gateway to
-              reaching out, whether you want to collaborate, ask a question, or
-              just say hello. You can find my contact details below, and I
-              encourage you to get in touch. I’m always open to new
-              opportunities, feedback, or a friendly chat.
+              I'd love to connect with you! Whether you're interested in
+              collaboration, have questions about my work, or just want to say
+              hello, feel free to reach out. I'm always open to new
+              opportunities, feedback, or a friendly conversation.
             </p>
             <ul className="welcome-usage-list">
               <li>
-                Email me at: nguyenminhkhoi3913@gmail.com to start a
-                conversation
+                <strong>Email:</strong> nguyenminhkhoi3913@gmail.com
               </li>
               <li>
-                Connect with me using the built-in "Message Me" program on this retro
-                desktop
+                <strong>Message Me:</strong> Use the "Message Me" program icon on
+                the desktop to send me a message directly through this interface
+              </li>
+              <li>
+                <strong>My Contact:</strong> Open the "My Contact" window for
+                additional contact information and links
               </li>
             </ul>
             <p className="welcome-closing-text">
-              Feel free to explore more, and don’t hesitate to reach out. I look
-              forward to hearing from you!
+              Thank you for visiting my portfolio! Don't hesitate to reach out
+              if you'd like to discuss projects, opportunities, or anything else.
+              I look forward to hearing from you!
             </p>
           </>
         );
@@ -98,25 +112,25 @@ const Welcome = () => {
 
   return (
     <div className="welcome-container">
-      <div className="welcome-menu-section">
-        <div
-          className="welcome-menu-item"
+      <div className="welcome-buttons-group">
+        <button
+          className="welcome-menu-item window-button program-button"
           onClick={() => setActiveSection("welcome")}
         >
           Welcome
-        </div>
-        <div
-          className="welcome-menu-item"
+        </button>
+        <button
+          className="welcome-menu-item window-button program-button"
           onClick={() => setActiveSection("discover")}
         >
           Discover
-        </div>
-        <div
-          className="welcome-menu-item"
+        </button>
+        <button
+          className="welcome-menu-item window-button program-button"
           onClick={() => setActiveSection("contact-now")}
         >
-          Contact Now
-        </div>
+          Contact
+        </button>
       </div>
       <div className="welcome-content-section">{content}</div>
     </div>

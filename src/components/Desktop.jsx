@@ -6,7 +6,6 @@ import Explorer from "./Explorer";
 import Taskbar from "./Taskbar";
 import MenuBar from "./MenuBar";
 import LoadingScreen from "./LoadingScreen";
-import ShutdownScreen from "./ShutdownScreen";
 import { useWindow } from "../hooks/useWindow";
 import { useDesktop } from "../hooks/useDesktop";
 import { useLoadingScreen } from "../hooks/useLoadingScreen";
@@ -170,7 +169,7 @@ const Desktop = memo(({ onFullScreenChange }) => {
   }
 
   if (isShuttingDown && shutdownStage === 2) {
-    return <ShutdownScreen onComplete={() => window.close()} />;
+    return <LoadingScreen mode="shutdown" onComplete={() => window.close()} />;
   }
 
   if (isDelaying) {

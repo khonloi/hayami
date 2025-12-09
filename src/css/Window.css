@@ -43,7 +43,7 @@
   border-left: 2px solid var(--button-border-light);
   border-top: 2px solid var(--button-border-light);
   box-shadow: 0 0 0 2px var(--windows-black);
-  font-size: 18px;
+  font-size: 17px;
   padding: 1px 10px 2px;
   font-weight: bold;
   display: flex;
@@ -128,6 +128,15 @@
   pointer-events: none !important;
   position: absolute !important;
   z-index: -1 !important;
+}
+
+.windows-window.minimized * {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.windows-window.minimized .window-content {
+  display: none !important;
 }
 
 /* Full-screen styles */
