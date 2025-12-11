@@ -165,9 +165,9 @@
 /* Touch-friendly improvements */
 @media (max-width: 768px) { 
   .window-button.control-button {
-    min-width: 32px;
-    min-height: 32px;
-    font-size: 32px;
+    min-width: 34px;
+    min-height: 34px;
+    font-size: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
