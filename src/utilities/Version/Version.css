@@ -1,7 +1,7 @@
 /* Version.css */
 .version-container {
   width: 19rem;
-  height: 346px;
+  height: 24rem;
   padding: 16px;
 }
 
@@ -50,6 +50,7 @@
 .version-legal {
   border-top: 2px solid var(--button-border-dark);
   padding-top: 4px;
+  line-height: 1.5;
 }
 
 .version-legal-text {
@@ -71,7 +72,7 @@
   }
 
   .version-spec-label {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 
   .version-logo-group {

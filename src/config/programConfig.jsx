@@ -44,7 +44,7 @@ export const desktopItems = [
     contents: [
       {
         id: "network",
-        label: "Computer Communications",
+        label: "Computer Network",
         iconSrc: docIcon,
         type: "icon",
         isMaximizable: false,

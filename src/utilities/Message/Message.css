@@ -1,6 +1,6 @@
 .message-me-window {
-  width: 34rem;
-  height: 26rem;
+  width: 35rem;
+  height: 28rem;
   padding: 16px;
   font-family: var(--main-font);
   box-sizing: border-box;
@@ -27,7 +27,7 @@
 }
 
 .textarea {
-  height: 152px;
+  height: 186px;
   resize: vertical;
 }
 
