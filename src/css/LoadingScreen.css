@@ -50,13 +50,8 @@
   flex-shrink: 0;
 }
 
-.mac-logo {
-  width: 100px;
-  height: auto;
-}
-
 .progress-bar {
-  width: 150px;
+  width: 10rem;
   height: 12px;
   border: 2px solid var(--windows-black);
   flex-shrink: 0;

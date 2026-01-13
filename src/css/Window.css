@@ -14,13 +14,18 @@
 }
 
 .window-title-bar {
-  background-color: var(--windows-purple);
+  background-color: var(--windows-bg);
   border-bottom: 2px solid var(--windows-black);
-  color: var(--windows-white);
+  color: var(--windows-black);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+}
+
+.windows-window.focused .window-title-bar {
+  background-color: var(--windows-purple);
+  color: var(--windows-white);
 }
 
 .window-title {
@@ -43,7 +48,7 @@
   border-left: 2px solid var(--button-border-light);
   border-top: 2px solid var(--button-border-light);
   box-shadow: 0 0 0 2px var(--windows-black);
-  font-size: 17px;
+  font-size: 16px;
   padding: 1px 10px 2px;
   font-weight: bold;
   display: flex;

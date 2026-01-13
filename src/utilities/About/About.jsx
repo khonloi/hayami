@@ -37,7 +37,7 @@ const SKILLS_DATA = [
   {
     id: "devops",
     title: "DevOps & Deployment",
-    skills: ["PostgreSQL", "Prisma", "Firebase", "Heroku"],
+    skills: ["MongoDB", "Vercel", "Firebase", "Heroku"],
   },
 ];
 

@@ -18,7 +18,7 @@ import "../css/MenuBar.css";
 import { desktopItems, renderWindowContent } from "../config/programConfig";
 
 const Desktop = memo(({ onFullScreenChange }) => {
-  const { openWindows, openWindow, closeWindow, focusWindow } = useWindow();
+  const { openWindows, openWindow, closeWindow, focusWindow, focusedWindow } = useWindow();
   const { allDesktopItems, itemPositions, handleItemPositionChange } =
     useDesktop();
   const { isLoading, isDelaying, progress, menuBarVisible, skipLoading } =
@@ -38,7 +38,6 @@ const Desktop = memo(({ onFullScreenChange }) => {
   const [windowLoadingStates, setWindowLoadingStates] = useState({});
   const [hasStarted, setHasStarted] = useState(false);
   // Track loading state of each window
-
 
   const handleItemDoubleClick = useCallback(
     (id, label) => {
@@ -119,19 +118,21 @@ const Desktop = memo(({ onFullScreenChange }) => {
         />
       );
     },
-    [folderDataMap, handleItemDoubleClick, handleItemPositionChange, selectedIcon]
+    [
+      folderDataMap,
+      handleItemDoubleClick,
+      handleItemPositionChange,
+      selectedIcon,
+    ]
   );
 
   // Handle window loading state changes
-  const handleWindowLoadingChange = useCallback(
-    (windowId, isLoading) => {
-      setWindowLoadingStates((prev) => ({
-        ...prev,
-        [windowId]: isLoading,
-      }));
-    },
-    []
-  );
+  const handleWindowLoadingChange = useCallback((windowId, isLoading) => {
+    setWindowLoadingStates((prev) => ({
+      ...prev,
+      [windowId]: isLoading,
+    }));
+  }, []);
 
   // Handle startup sequence
   useEffect(() => {
@@ -271,6 +272,7 @@ const Desktop = memo(({ onFullScreenChange }) => {
               isMinimized={isMinimized}
               isMaximizable={win.isMaximizable}
               isFullScreen={win.isFullScreen}
+              isFocused={win.id === focusedWindow}
               onClose={handleCloseWindow}
               onMinimize={handleMinimizeWindow}
               onFocus={focusWindow}

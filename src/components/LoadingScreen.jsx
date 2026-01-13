@@ -11,11 +11,11 @@ import startupCard from "../assets/images/startup-card-1.png";
  * @param {Function} props.onSkip - Callback for skip action (loading mode)
  * @param {Function} props.onComplete - Callback for completion (shutdown mode)
  */
-const LoadingScreen = ({ 
-  mode = 'loading', 
-  progress: initialProgress, 
+const LoadingScreen = ({
+  mode = "loading",
+  progress: initialProgress,
   onSkip,
-  onComplete 
+  onComplete,
 }) => {
   const [stage, setStage] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
@@ -27,17 +27,17 @@ const LoadingScreen = ({
 
   // Initialize displayed lines based on mode
   const [displayedLines, setDisplayedLines] = useState(() => {
-    if (mode === 'shutdown') {
+    if (mode === "shutdown") {
       return ["You can now close this browser tab "];
     }
     return [
-      "V8 JavaScript Engine v12.1, An Energy Star Ally",
-      "Copyright (C) 1984-2025, Kaison Computer, Inc. ",
+      "V8 JavaScript Engine v12.4 - Energy Efficient Mode",
+      "Copyright (C) 1984-2026 Kaison Computer Company",
       "",
       "⠀",
       "",
       "",
-      "Dependencies Check: ",
+      "Running dependency verification "
     ];
   });
 
@@ -62,12 +62,12 @@ const LoadingScreen = ({
 
   // Common function to restore cursor
   const restoreCursor = () => {
-    document.body.style.cursor = getCursorStyle('arrow');
+    document.body.style.cursor = getCursorStyle("arrow");
   };
 
   // Handle keyboard and touch events
   useEffect(() => {
-    if (mode === 'shutdown') {
+    if (mode === "shutdown") {
       const handleKeyPress = (event) => {
         if (event.key === "Enter") {
           window.location.reload();
@@ -97,7 +97,7 @@ const LoadingScreen = ({
         event.preventDefault();
         const currentTime = new Date().getTime();
         const tapLength = currentTime - lastTapRef.current;
-        
+
         if (tapLength < 600 && tapLength > 0) {
           onSkip?.();
         }
@@ -106,7 +106,9 @@ const LoadingScreen = ({
 
       hideCursor();
       document.addEventListener("keydown", handleKeyPress);
-      document.addEventListener("touchstart", handleTouchStart, { passive: false });
+      document.addEventListener("touchstart", handleTouchStart, {
+        passive: false,
+      });
 
       return () => {
         document.removeEventListener("keydown", handleKeyPress);
@@ -118,7 +120,7 @@ const LoadingScreen = ({
 
   // Platform detection (loading mode only)
   useEffect(() => {
-    if (mode === 'loading') {
+    if (mode === "loading") {
       try {
         const platform = navigator.platform || "Unknown Platform";
         const userAgent = navigator.userAgent;
@@ -143,7 +145,7 @@ const LoadingScreen = ({
         }
 
         const platformLine = `${platform}(TM) Platform`;
-        const cpuLine = `${cpuInfo} with ${cpuCores} Cores`;
+        const cpuLine = `Detected: ${cpuInfo} @ ${cpuCores} Cores`;
 
         setDisplayedLines((prev) => {
           const newLines = [...prev];
@@ -154,8 +156,8 @@ const LoadingScreen = ({
       } catch {
         setDisplayedLines((prev) => {
           const newLines = [...prev];
-          newLines[4] = "FPT Platform (TM)";
-          newLines[5] = "570GX CPU @ 1 Core";
+          newLines[4] = "Kaison FPT-9000 Series (TM) Platform";
+          newLines[5] = "570GX Quantum Core @ 1 logical processor";
           return newLines;
         });
       }
@@ -164,14 +166,14 @@ const LoadingScreen = ({
 
   // Boot sequence animation (loading mode only)
   useEffect(() => {
-    if (mode === 'loading') {
+    if (mode === "loading") {
       const bootLines = [
-        "  Detecting react ... @19.1.0 ",
-        "  Detecting react-dom ... @19.1.0 ",
-        "  Detecting vite ... @6.3.5 ",
-        "  Detecting vitejs/plugin-react ... @4.4.1 ",
-        "  Detecting eslint ... @9.25.0 ",
-        "  Detecting gh-pages ... @6.3.0 ",
+        "  React Stack ............ 19.1.0 [OK] ",
+        "  DOM Renderer ........... 19.1.0 [OK] ",
+        "  Vite Bundler ........... 6.3.5  [OK] ",
+        "  Fast Refresh ........... 4.4.1  [OK] ",
+        "  Linter Module .......... 9.25.0 [OK] ",
+        "  Static Deploy Util ..... 6.3.0  [OK] ",
         "",
         "Starting VisiCore ... ",
       ];
@@ -189,17 +191,17 @@ const LoadingScreen = ({
           });
           setDisplayedLines((prev) => [...prev, bootLines[i]]);
         }
-        
+
         await new Promise((resolve) => {
           timeoutId = setTimeout(resolve, 2500);
         });
-        
+
         setStage(1);
-        
+
         await new Promise((resolve) => {
           timeoutId = setTimeout(resolve, 1500);
         });
-        
+
         setProgress(0);
         setStage(2);
       };
@@ -215,12 +217,12 @@ const LoadingScreen = ({
 
   // Shutdown sequence timing
   useEffect(() => {
-    if (mode === 'shutdown') {
+    if (mode === "shutdown") {
       setStage(0);
-      
+
       setTimeout(() => {
         setStage(1);
-        
+
         setTimeout(() => {
           setStage(2);
         }, 1500);
@@ -230,13 +232,13 @@ const LoadingScreen = ({
 
   // Progress update (loading mode only)
   useEffect(() => {
-    if (mode === 'loading' && stage === 2) {
+    if (mode === "loading" && stage === 2) {
       setProgress(initialProgress);
     }
   }, [initialProgress, stage, mode]);
 
   // Render based on mode and stage
-  if (mode === 'shutdown') {
+  if (mode === "shutdown") {
     // Shutdown mode: Loading screen (stage 0) - wait for image to load
     if (stage === 0) {
       if (!imageLoaded) {
@@ -246,7 +248,11 @@ const LoadingScreen = ({
         <div className="loading-screen">
           <div className="loading-content">
             <div className="startup-card-container">
-              <img src={startupCard} alt="Startup Card" className="startup-card" />
+              <img
+                src={startupCard}
+                alt="Startup Card"
+                className="startup-card"
+              />
             </div>
             <div className="loading-status">
               <p className="loading-text">Shutting down</p>
@@ -255,13 +261,12 @@ const LoadingScreen = ({
         </div>
       );
     }
-    
+
     // Shutdown mode: Black screen transition (stage 1)
     if (stage === 1) {
       return (
         <div className="loading-screen boot-mode">
-          <div className="boot-sequence">
-          </div>
+          <div className="boot-sequence"></div>
         </div>
       );
     }
@@ -276,9 +281,7 @@ const LoadingScreen = ({
             </div>
           ))}
           {showRestartMessage && (
-            <div className="boot-line skip-line">
-              Press Enter to restart
-            </div>
+            <div className="boot-line skip-line">Press Enter to restart</div>
           )}
         </div>
       </div>
@@ -309,7 +312,7 @@ const LoadingScreen = ({
       </div>
     );
   }
-  
+
   // Loading mode: Transition screen (stage 1)
   if (stage === 1) {
     return (
@@ -329,7 +332,7 @@ const LoadingScreen = ({
   if (!imageLoaded) {
     return null; // Don't render until image is loaded
   }
-  
+
   return (
     <div className="loading-screen">
       <div className="loading-content">

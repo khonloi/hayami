@@ -3,7 +3,6 @@ import Contact from "../utilities/Contact/Contact";
 import Welcome from "../utilities/Welcome/Welcome";
 import Message from "../utilities/Message/Message";
 import StarShow from "../utilities/StarShow/StarShow";
-import Version from "../utilities/Version/Version";
 
 // Import your icons
 import logoIcon from "../assets/icons/Tree.ico";
@@ -25,6 +24,8 @@ import computerIcon from "../assets/icons/Microsoft Windows 3 Computer.ico";
 import faxIcon from "../assets/icons/Microsoft Windows 3 Fax Machine.ico";
 import docIcon from "../assets/icons/Microsoft Windows 3 Documents.ico";
 import aboutIcon from "../assets/icons/Microsoft Windows 3 Post-It.ico";
+import gashIcon from "../assets/icons/GASH.ico";
+import winAmpIcon from "../assets/icons/WinAmp.ico";
 
 // Unified desktop items configuration
 export const desktopItems = [
@@ -99,6 +100,22 @@ export const desktopItems = [
         isMaximizable: false,
         link: "https://khonloi.github.io/retro-homepage/",
       },
+      {
+        id: "gash1",
+        label: "GASH",
+        iconSrc: gashIcon,
+        type: "icon",
+        isMaximizable: false,
+        link: "https://gash-pi.vercel.app/",
+      },
+      {
+        id: "gash2",
+        label: "GASH Dashboard",
+        iconSrc: gashIcon,
+        type: "icon",
+        isMaximizable: false,
+        link: "https://gash-dashboard.vercel.app/",
+      },
     ],
   },
   {
@@ -112,13 +129,6 @@ export const desktopItems = [
     id: "message",
     label: "Message Me",
     iconSrc: faxIcon,
-    type: "icon",
-    isMaximizable: false,
-  },
-    {
-    id: "version",
-    label: "Version",
-    iconSrc: logoIcon,
     type: "icon",
     isMaximizable: false,
   },
@@ -211,9 +221,61 @@ export const desktopItems = [
     ],
   },
   {
+    id: "picture",
+    label: "Picture",
+    iconSrc: folderIcon,
+    type: "folder",
+    positionRight: true,
+    contents: [{
+      id: "image1",
+      label: "Ascent.jpg",
+      iconSrc: monaLisaIcon,
+      type: "icon",
+      isMaximizable: true,
+      link: "https://static.wikitide.net/windowswallpaperwiki/6/63/Ascent.jpg",
+    },
+    {
+      id: "image2",
+      label: "Autumn.jpg",
+      iconSrc: monaLisaIcon,
+      type: "icon",
+      isMaximizable: true,
+      link: "https://static.wikitide.net/windowswallpaperwiki/a/aa/Autumn.jpg",
+    },
+    {
+      id: "image3",
+      label: "Azul.jpg",
+      iconSrc: monaLisaIcon,
+      type: "icon",
+      isMaximizable: true,
+      link: "https://static.wikitide.net/windowswallpaperwiki/a/a4/Azul.jpg",
+    }, {
+      id: "image4",
+      label: "Bliss.jpg",
+      iconSrc: monaLisaIcon,
+      type: "icon",
+      isMaximizable: true,
+      link: "https://static.wikitide.net/windowswallpaperwiki/c/cf/Bliss.jpg",
+    },
+    {
+      id: "image5",
+      label: "Follow.jpg",
+      iconSrc: monaLisaIcon,
+      type: "icon",
+      isMaximizable: true,
+      link: "https://static.wikitide.net/windowswallpaperwiki/5/53/Follow.jpg",
+    },],
+  },
+  {
+    id: "winamp",
+    label: "WinAmp",
+    iconSrc: winAmpIcon,
+    type: "icon",
+    positionRight: true,
+  },
+  {
     id: "starshow",
     label: "Star Show",
-    // iconSrc: logoIcon,
     type: "icon",
     positionRight: true,
     isFullScreen: true,
@@ -227,7 +289,6 @@ const windowContentRegistry = {
   welcome: Welcome,
   message: Message,
   starshow: StarShow,
-  version: Version,
 };
 
 // Default fallback component

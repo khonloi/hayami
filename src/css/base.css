@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -8,12 +9,7 @@ html, body {
 }
 
 body {
-  background: linear-gradient(
-  to bottom,
-  #405797, /* Top */
-  #926FBE, /* Middle */
-  #E79AF2  /* Bottom */
-);
+  background: linear-gradient(to bottom, #5a63a6, #8a73c2, #cf7fa0);
   min-width: 320px;
   min-height: 100vh;
 }
@@ -33,6 +29,13 @@ textarea {
   cursor: copy;
 }
 
-a, a:link, a:visited, .draggable, .dragging, .moveable, .draggable-item, button {
+a,
+a:link,
+a:visited,
+.draggable,
+.dragging,
+.moveable,
+.draggable-item,
+button {
   cursor: var(--cursor-link);
 }
