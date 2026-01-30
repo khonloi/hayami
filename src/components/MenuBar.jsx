@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../css/MenuBar.css";
-import ShutdownDialog from "./ShutdownDialog";
+import Dialog from "./Dialog";
+import monitorMoonIcon from "../assets/icons/Microsoft Windows 3 Post-It.ico";
 import keyGrayIcon from "../assets/icons/Microsoft Windows 3 Keys.ico";
 
 const MenuBar = ({ visible = true, onShutdown }) => {
@@ -28,7 +29,7 @@ const MenuBar = ({ visible = true, onShutdown }) => {
     // Format as "Day Month" with ordinal suffix (e.g., "6th August")
     const day = date.getDate();
     const month = date.toLocaleDateString(undefined, { month: "long" });
-    
+
     return `${day} ${month}`;
   };
 
@@ -61,10 +62,26 @@ const MenuBar = ({ visible = true, onShutdown }) => {
           </button>
         </div>
       </div>
-      <ShutdownDialog
+      <Dialog
+        id="shutdown-dialog"
         isVisible={showShutdownDialog}
+        title="Exit Session"
+        message="Do you want to end your Pane?"
+        icon={monitorMoonIcon}
         onClose={handleCloseShutdownDialog}
-        onShutdown={onShutdown}
+        buttons={[
+          {
+            label: "Yes",
+            onClick: () => {
+              handleCloseShutdownDialog();
+              onShutdown?.();
+            },
+          },
+          {
+            label: "No",
+            onClick: handleCloseShutdownDialog,
+          },
+        ]}
       />
     </>
   );

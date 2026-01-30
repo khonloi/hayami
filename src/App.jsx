@@ -20,6 +20,14 @@ function App() {
     <div className={`App ${isFullScreen ? 'fullscreen' : ''}`}>
       <Desktop onFullScreenChange={handleFullScreenChange} />
       {/* <ScreensaverManager /> */}
+
+      {/* Hidden preloader for custom cursors to prevent flickers */}
+      <div style={{ position: 'fixed', opacity: 0, pointerEvents: 'none', zIndex: -1 }}>
+        <div style={{ cursor: 'var(--cursor-arrow)' }}></div>
+        <div style={{ cursor: 'var(--cursor-link)' }}></div>
+        <div style={{ cursor: 'var(--cursor-wait)' }}></div>
+        <div style={{ cursor: 'var(--cursor-busy)' }}></div>
+      </div>
     </div>
   );
 }

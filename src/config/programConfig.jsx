@@ -4,6 +4,8 @@ import Welcome from "../features/Welcome/Welcome";
 import Message from "../features/Message/Message";
 import StarShow from "../features/StarShow/StarShow";
 import VideoPlayer from "../features/VideoPlayer/VideoPlayer";
+import FileManager from "../features/FileManager/FileManager";
+
 
 // Import your icons
 import logoIcon from "../assets/icons/Tree.ico";
@@ -34,6 +36,8 @@ import schedulerIcon from "../assets/icons/Microsoft Windows 3 Schedule.ico";
 import recorderIcon from "../assets/icons/Microsoft Windows 3 Sound Recorder.ico";
 import minesweeperIcon from "../assets/icons/Microsoft Windows 3 Minesweeper.ico";
 import solitaireIcon from "../assets/icons/Microsoft Windows 3 Solitaire.ico";
+import fileManagerIcon from "../assets/icons/Microsoft Windows 3 File Manager.ico";
+
 
 // Unified desktop items configuration
 export const desktopItems = [
@@ -191,6 +195,13 @@ export const desktopItems = [
         isMaximizable: false,
       },
       {
+        id: "fileManager",
+        label: "File Manager",
+        iconSrc: fileManagerIcon,
+        type: "icon",
+        isMaximizable: true,
+      },
+      {
         id: "internet",
         label: "Internet",
         iconSrc: internetIcon,
@@ -311,6 +322,8 @@ export const desktopItems = [
   },
 ];
 
+import Dialog from "../components/Dialog";
+
 // Window content registry for better maintainability and performance
 const windowContentRegistry = {
   about: About,
@@ -319,22 +332,24 @@ const windowContentRegistry = {
   message: Message,
   starshow: StarShow,
   video: VideoPlayer,
+  // fileManager: FileManager,
 };
 
-// Default fallback component
-const DefaultWindowContent = ({ windowTitle }) => (
-  <div className="p-4">
-    <h3 className="text-lg font-bold">{windowTitle}</h3>
-    <p>{windowTitle} coming soon...</p>
-    <p>This would be where the {windowTitle} interface would load.</p>
-  </div>
-);
-
 // Window content renderer function - optimized with registry lookup
-export const renderWindowContent = (windowId, windowTitle) => {
+export const renderWindowContent = (windowId, windowTitle, onClose, icon) => {
   const Component = windowContentRegistry[windowId];
   if (Component) {
-    return <Component />;
+    return <Component onClose={onClose} />;
   }
-  return <DefaultWindowContent windowTitle={windowTitle} />;
+
+  return (
+    <Dialog
+      isVisible={true}
+      title={windowTitle}
+      message="This program is currently being updated."
+      icon={noteIcon}
+      buttons={[{ label: "OK", onClick: onClose }]}
+      onClose={onClose}
+    />
+  );
 };

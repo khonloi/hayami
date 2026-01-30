@@ -77,7 +77,7 @@ const DialogWindow = memo(({
   return (
     <div
       ref={elementRef}
-      className="windows-window"
+      className="windows-window focused"
       style={windowStyle}
       onMouseDown={handleTitleBarMouseDown}
       onTouchStart={handleTitleBarTouchStart}

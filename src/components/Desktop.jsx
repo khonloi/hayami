@@ -266,6 +266,15 @@ const Desktop = memo(({ onFullScreenChange }) => {
 
         {openWindows.map((win) => {
           const isMinimized = minimizedWindowIds.has(win.id);
+          const content = win.type === "folder"
+            ? renderFolderContent(win.folderId)
+            : renderWindowContent(win.id, win.title, () => handleCloseWindow(win.id), win.iconSrc);
+
+          // If the content is already a Dialog, it has its own window frame and overlay.
+          // We render it directly to avoid double-windowing (empty parent window behind dialog).
+          if (content && content.type && content.type.displayName === "Dialog") {
+            return <React.Fragment key={win.id}>{content}</React.Fragment>;
+          }
 
           return (
             <Window
@@ -283,12 +292,10 @@ const Desktop = memo(({ onFullScreenChange }) => {
               onMinimize={handleMinimizeWindow}
               onFocus={focusWindow}
               onFullScreenChange={onFullScreenChange}
-              onLoadingChange={handleWindowLoadingChange} // New prop
+              onLoadingChange={handleWindowLoadingChange}
               aria-label={`${win.title} window`}
             >
-              {win.type === "folder"
-                ? renderFolderContent(win.folderId)
-                : renderWindowContent(win.id, win.title)}
+              {content}
             </Window>
           );
         })}

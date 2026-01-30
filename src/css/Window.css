@@ -79,7 +79,8 @@
 }
 
 .window-content {
-  border-top: 3px solid var(--windows-bg);
+  border-top: 2px solid var(--windows-bg);
+  border-left: 2px solid var(--windows-bg);
   overflow: auto;
   user-select: text;
   -webkit-user-select: text;

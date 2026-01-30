@@ -1,0 +1,3619 @@
+{
+  "id": "root",
+  "name": "retro-homepage",
+  "type": "folder",
+  "children": [
+    {
+      "id": "public",
+      "name": "public",
+      "type": "folder",
+      "children": [
+        {
+          "id": "public\\sounds",
+          "name": "sounds",
+          "type": "folder",
+          "children": [
+            {
+              "id": "public\\sounds\\chord.mp3",
+              "name": "chord.mp3",
+              "type": "file",
+              "size": "29.9 KB",
+              "date": "2025-08-29"
+            },
+            {
+              "id": "public\\sounds\\collapse.mp3",
+              "name": "collapse.mp3",
+              "type": "file",
+              "size": "10.4 KB",
+              "date": "2025-08-25"
+            },
+            {
+              "id": "public\\sounds\\expand.mp3",
+              "name": "expand.mp3",
+              "type": "file",
+              "size": "9.2 KB",
+              "date": "2025-08-25"
+            },
+            {
+              "id": "public\\sounds\\logoff.mp3",
+              "name": "logoff.mp3",
+              "type": "file",
+              "size": "291.2 KB",
+              "date": "2026-01-24"
+            },
+            {
+              "id": "public\\sounds\\logon.mp3",
+              "name": "logon.mp3",
+              "type": "file",
+              "size": "291.6 KB",
+              "date": "2026-01-24"
+            },
+            {
+              "id": "public\\sounds\\maximize.mp3",
+              "name": "maximize.mp3",
+              "type": "file",
+              "size": "9.6 KB",
+              "date": "2025-08-25"
+            },
+            {
+              "id": "public\\sounds\\minimize.mp3",
+              "name": "minimize.mp3",
+              "type": "file",
+              "size": "9.6 KB",
+              "date": "2025-08-25"
+            }
+          ]
+        },
+        {
+          "id": "public\\_headers",
+          "name": "_headers",
+          "type": "file",
+          "size": "0.8 KB",
+          "date": "2025-08-25"
+        },
+        {
+          "id": "public\\favicon.ico",
+          "name": "favicon.ico",
+          "type": "file",
+          "size": "98.7 KB",
+          "date": "2025-09-29"
+        },
+        {
+          "id": "public\\manifest.json",
+          "name": "manifest.json",
+          "type": "file",
+          "size": "0.4 KB",
+          "date": "2025-08-25"
+        },
+        {
+          "id": "public\\sw.js",
+          "name": "sw.js",
+          "type": "file",
+          "size": "1.7 KB",
+          "date": "2025-08-25"
+        },
+        {
+          "id": "public\\vite.svg",
+          "name": "vite.svg",
+          "type": "file",
+          "size": "1.5 KB",
+          "date": "2025-08-25"
+        }
+      ]
+    },
+    {
+      "id": "scripts",
+      "name": "scripts",
+      "type": "folder",
+      "children": [
+        {
+          "id": "scripts\\generateFilesystem.js",
+          "name": "generateFilesystem.js",
+          "type": "file",
+          "size": "1.7 KB",
+          "date": "2026-01-24"
+        }
+      ]
+    },
+    {
+      "id": "src",
+      "name": "src",
+      "type": "folder",
+      "children": [
+        {
+          "id": "src\\assets",
+          "name": "assets",
+          "type": "folder",
+          "children": [
+            {
+              "id": "src\\assets\\cursors",
+              "name": "cursors",
+              "type": "folder",
+              "children": [
+                {
+                  "id": "src\\assets\\cursors\\3dgarro.cur",
+                  "name": "3dgarro.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgbeam.cur",
+                  "name": "3dgbeam.cur",
+                  "type": "file",
+                  "size": "1.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgcross.cur",
+                  "name": "3dgcross.cur",
+                  "type": "file",
+                  "size": "1.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dghelpsel.cur",
+                  "name": "3dghelpsel.cur",
+                  "type": "file",
+                  "size": "1.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dglin1.ani",
+                  "name": "3dglin1.ani",
+                  "type": "file",
+                  "size": "4.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dglink.ani",
+                  "name": "3dglink.ani",
+                  "type": "file",
+                  "size": "4.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgmove_ani.ani",
+                  "name": "3dgmove_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgmove.cur",
+                  "name": "3dgmove.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgnesw_ani.ani",
+                  "name": "3dgnesw_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgnesw.cur",
+                  "name": "3dgnesw.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgno.cur",
+                  "name": "3dgno.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgnodrop.cur",
+                  "name": "3dgnodrop.cur",
+                  "type": "file",
+                  "size": "4.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgns_ani.ani",
+                  "name": "3dgns_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgns.cur",
+                  "name": "3dgns.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgnwse_ani.ani",
+                  "name": "3dgnwse_ani.ani",
+                  "type": "file",
+                  "size": "2.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgnwse.cur",
+                  "name": "3dgnwse.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgpen.cur",
+                  "name": "3dgpen.cur",
+                  "type": "file",
+                  "size": "1.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgtwist.ani",
+                  "name": "3dgtwist.ani",
+                  "type": "file",
+                  "size": "6.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgup_ani.ani",
+                  "name": "3dgup_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgup.ani",
+                  "name": "3dgup.ani",
+                  "type": "file",
+                  "size": "0.9 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgwagtail.ani",
+                  "name": "3dgwagtail.ani",
+                  "type": "file",
+                  "size": "5.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgwe_ani.ani",
+                  "name": "3dgwe_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dgwe.cur",
+                  "name": "3dgwe.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsarro.cur",
+                  "name": "3dsarro.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsbeam.cur",
+                  "name": "3dsbeam.cur",
+                  "type": "file",
+                  "size": "1.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dscross.cur",
+                  "name": "3dscross.cur",
+                  "type": "file",
+                  "size": "1.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dshelpsel.cur",
+                  "name": "3dshelpsel.cur",
+                  "type": "file",
+                  "size": "1.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dslin1.ani",
+                  "name": "3dslin1.ani",
+                  "type": "file",
+                  "size": "4.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dslink.ani",
+                  "name": "3dslink.ani",
+                  "type": "file",
+                  "size": "4.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsmove_ani.ani",
+                  "name": "3dsmove_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsmove.cur",
+                  "name": "3dsmove.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsnesw_ani.ani",
+                  "name": "3dsnesw_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsnesw.cur",
+                  "name": "3dsnesw.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsno.cur",
+                  "name": "3dsno.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsnodrop.cur",
+                  "name": "3dsnodrop.cur",
+                  "type": "file",
+                  "size": "4.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsns_ani.ani",
+                  "name": "3dsns_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsns.cur",
+                  "name": "3dsns.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsnwse_ani.ani",
+                  "name": "3dsnwse_ani.ani",
+                  "type": "file",
+                  "size": "2.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsnwse.cur",
+                  "name": "3dsnwse.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dspen.cur",
+                  "name": "3dspen.cur",
+                  "type": "file",
+                  "size": "1.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dstwist.ani",
+                  "name": "3dstwist.ani",
+                  "type": "file",
+                  "size": "6.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsup_ani.ani",
+                  "name": "3dsup_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dsup.ani",
+                  "name": "3dsup.ani",
+                  "type": "file",
+                  "size": "0.9 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dswagtail.ani",
+                  "name": "3dswagtail.ani",
+                  "type": "file",
+                  "size": "5.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dswe_ani.ani",
+                  "name": "3dswe_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dswe.cur",
+                  "name": "3dswe.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwarro.cur",
+                  "name": "3dwarro.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwbeam.cur",
+                  "name": "3dwbeam.cur",
+                  "type": "file",
+                  "size": "1.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwcross.cur",
+                  "name": "3dwcross.cur",
+                  "type": "file",
+                  "size": "1.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwhelpsel.cur",
+                  "name": "3dwhelpsel.cur",
+                  "type": "file",
+                  "size": "1.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwlin1.ani",
+                  "name": "3dwlin1.ani",
+                  "type": "file",
+                  "size": "4.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwlink.ani",
+                  "name": "3dwlink.ani",
+                  "type": "file",
+                  "size": "4.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwmove_ani.ani",
+                  "name": "3dwmove_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwmove.cur",
+                  "name": "3dwmove.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwnesw_ani.ani",
+                  "name": "3dwnesw_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwnesw.cur",
+                  "name": "3dwnesw.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwno.cur",
+                  "name": "3dwno.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwnodrop.cur",
+                  "name": "3dwnodrop.cur",
+                  "type": "file",
+                  "size": "4.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwns_ani.ani",
+                  "name": "3dwns_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwns.cur",
+                  "name": "3dwns.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwnwse_ani.ani",
+                  "name": "3dwnwse_ani.ani",
+                  "type": "file",
+                  "size": "2.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwnwse.cur",
+                  "name": "3dwnwse.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwpen.cur",
+                  "name": "3dwpen.cur",
+                  "type": "file",
+                  "size": "1.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwtwist.ani",
+                  "name": "3dwtwist.ani",
+                  "type": "file",
+                  "size": "6.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwup_ani.ani",
+                  "name": "3dwup_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwup.ani",
+                  "name": "3dwup.ani",
+                  "type": "file",
+                  "size": "0.9 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwwagtail.ani",
+                  "name": "3dwwagtail.ani",
+                  "type": "file",
+                  "size": "5.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwwe_ani.ani",
+                  "name": "3dwwe_ani.ani",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\3dwwe.cur",
+                  "name": "3dwwe.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\appstar1_st.cur",
+                  "name": "appstar1_st.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\appstar1.ani",
+                  "name": "appstar1.ani",
+                  "type": "file",
+                  "size": "7.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\appstar2_st.cur",
+                  "name": "appstar2_st.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\appstar2.ani",
+                  "name": "appstar2.ani",
+                  "type": "file",
+                  "size": "7.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\appstar3_st.cur",
+                  "name": "appstar3_st.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\appstar3.ani",
+                  "name": "appstar3.ani",
+                  "type": "file",
+                  "size": "7.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\appstart.ani",
+                  "name": "appstart.ani",
+                  "type": "file",
+                  "size": "7.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\arrow_i.cur",
+                  "name": "arrow_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\arrow_il.cur",
+                  "name": "arrow_il.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\arrow_im.cur",
+                  "name": "arrow_im.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\arrow_l.cur",
+                  "name": "arrow_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\arrow_m.cur",
+                  "name": "arrow_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\arrow_r.cur",
+                  "name": "arrow_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\arrow_rl.cur",
+                  "name": "arrow_rl.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\arrow_rm.cur",
+                  "name": "arrow_rm.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\banana.ani",
+                  "name": "banana.ani",
+                  "type": "file",
+                  "size": "11.6 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\barber.ani",
+                  "name": "barber.ani",
+                  "type": "file",
+                  "size": "8.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\beam_i.cur",
+                  "name": "beam_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\beam_il.cur",
+                  "name": "beam_il.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\beam_im.cur",
+                  "name": "beam_im.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\beam_l.cur",
+                  "name": "beam_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\beam_m.cur",
+                  "name": "beam_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\beam_r.cur",
+                  "name": "beam_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\beam_rl.cur",
+                  "name": "beam_rl.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\beam_rm.cur",
+                  "name": "beam_rm.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\busy_i.cur",
+                  "name": "busy_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\busy_il.cur",
+                  "name": "busy_il.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\busy_im.cur",
+                  "name": "busy_im.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\busy_l.cur",
+                  "name": "busy_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\busy_m.cur",
+                  "name": "busy_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\busy_r.cur",
+                  "name": "busy_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\busy_rl.cur",
+                  "name": "busy_rl.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\busy_rm.cur",
+                  "name": "busy_rm.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\coin.ani",
+                  "name": "coin.ani",
+                  "type": "file",
+                  "size": "6.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\counter.ani",
+                  "name": "counter.ani",
+                  "type": "file",
+                  "size": "6.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\cross_i.cur",
+                  "name": "cross_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\cross_il.cur",
+                  "name": "cross_il.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\cross_im.cur",
+                  "name": "cross_im.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\cross_l.cur",
+                  "name": "cross_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\cross_m.cur",
+                  "name": "cross_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\cross_r.cur",
+                  "name": "cross_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\cross_rl.cur",
+                  "name": "cross_rl.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\cross_rm.cur",
+                  "name": "cross_rm.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\cross.cur",
+                  "name": "cross.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_arrow.cur",
+                  "name": "default_arrow.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_box.cur",
+                  "name": "default_box.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_busy.cur",
+                  "name": "default_busy.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_dvd.cur",
+                  "name": "default_dvd.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_helpsel.cur",
+                  "name": "default_helpsel.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_ibeam.cur",
+                  "name": "default_ibeam.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_link.cur",
+                  "name": "default_link.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_move.cur",
+                  "name": "default_move.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_no.cur",
+                  "name": "default_no.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_pen.cur",
+                  "name": "default_pen.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_scroll_e.cur",
+                  "name": "default_scroll_e.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_scroll_ew.cur",
+                  "name": "default_scroll_ew.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_scroll_move.cur",
+                  "name": "default_scroll_move.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_scroll_n.cur",
+                  "name": "default_scroll_n.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_scroll_ne.cur",
+                  "name": "default_scroll_ne.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_scroll_ns.cur",
+                  "name": "default_scroll_ns.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_scroll_nw.cur",
+                  "name": "default_scroll_nw.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_scroll_s.cur",
+                  "name": "default_scroll_s.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_scroll_se.cur",
+                  "name": "default_scroll_se.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_scroll_sw.cur",
+                  "name": "default_scroll_sw.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_scroll_w.cur",
+                  "name": "default_scroll_w.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_size1.cur",
+                  "name": "default_size1.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_size2.cur",
+                  "name": "default_size2.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_size3.cur",
+                  "name": "default_size3.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_size4.cur",
+                  "name": "default_size4.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_up.cur",
+                  "name": "default_up.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\default_wait.cur",
+                  "name": "default_wait.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\dinosau2.ani",
+                  "name": "dinosau2.ani",
+                  "type": "file",
+                  "size": "4.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\dinosaur.ani",
+                  "name": "dinosaur.ani",
+                  "type": "file",
+                  "size": "4.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\drum.ani",
+                  "name": "drum.ani",
+                  "type": "file",
+                  "size": "3.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\fillitup.ani",
+                  "name": "fillitup.ani",
+                  "type": "file",
+                  "size": "14.6 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hand.ani",
+                  "name": "hand.ani",
+                  "type": "file",
+                  "size": "3.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\handapst.ani",
+                  "name": "handapst.ani",
+                  "type": "file",
+                  "size": "6.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\handnesw.ani",
+                  "name": "handnesw.ani",
+                  "type": "file",
+                  "size": "1.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\handno.ani",
+                  "name": "handno.ani",
+                  "type": "file",
+                  "size": "4.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\handns.ani",
+                  "name": "handns.ani",
+                  "type": "file",
+                  "size": "1.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\handnwse.ani",
+                  "name": "handnwse.ani",
+                  "type": "file",
+                  "size": "1.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\handwait.ani",
+                  "name": "handwait.ani",
+                  "type": "file",
+                  "size": "7.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\handwe.ani",
+                  "name": "handwe.ani",
+                  "type": "file",
+                  "size": "1.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\harrow.cur",
+                  "name": "harrow.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hcross.cur",
+                  "name": "hcross.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\help_i.cur",
+                  "name": "help_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\help_il.cur",
+                  "name": "help_il.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\help_im.cur",
+                  "name": "help_im.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\help_l.cur",
+                  "name": "help_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\help_m.cur",
+                  "name": "help_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\help_r.cur",
+                  "name": "help_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\help_rl.cur",
+                  "name": "help_rl.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\help_rm.cur",
+                  "name": "help_rm.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hibeam.cur",
+                  "name": "hibeam.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hmove.cur",
+                  "name": "hmove.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hnesw.cur",
+                  "name": "hnesw.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hnodrop.cur",
+                  "name": "hnodrop.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hns.cur",
+                  "name": "hns.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hnwse.cur",
+                  "name": "hnwse.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\horse.ani",
+                  "name": "horse.ani",
+                  "type": "file",
+                  "size": "18.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hourgla2_st.cur",
+                  "name": "hourgla2_st.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hourgla2.ani",
+                  "name": "hourgla2.ani",
+                  "type": "file",
+                  "size": "11.6 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hourgla3_st.cur",
+                  "name": "hourgla3_st.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hourgla3.ani",
+                  "name": "hourgla3.ani",
+                  "type": "file",
+                  "size": "11.6 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hourglas_st.cur",
+                  "name": "hourglas_st.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hourglas.ani",
+                  "name": "hourglas.ani",
+                  "type": "file",
+                  "size": "11.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\hwe.cur",
+                  "name": "hwe.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\lappstrt.cur",
+                  "name": "lappstrt.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\larrow.cur",
+                  "name": "larrow.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\lcross.cur",
+                  "name": "lcross.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\lhelpsel.cur",
+                  "name": "lhelpsel.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\libeam.cur",
+                  "name": "libeam.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\link_i.cur",
+                  "name": "link_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\link_il.cur",
+                  "name": "link_il.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\link_im.cur",
+                  "name": "link_im.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\link_l.cur",
+                  "name": "link_l.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\link_m.cur",
+                  "name": "link_m.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\link_r.cur",
+                  "name": "link_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\link_rl.cur",
+                  "name": "link_rl.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\link_rm.cur",
+                  "name": "link_rm.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\llink.cur",
+                  "name": "llink.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\lmove.cur",
+                  "name": "lmove.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\lnesw.cur",
+                  "name": "lnesw.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\lnodrop.cur",
+                  "name": "lnodrop.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\lns.cur",
+                  "name": "lns.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\lnwse.cur",
+                  "name": "lnwse.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\lpen.cur",
+                  "name": "lpen.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\lup.cur",
+                  "name": "lup.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\lwait.cur",
+                  "name": "lwait.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\lwe.cur",
+                  "name": "lwe.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\metronom.ani",
+                  "name": "metronom.ani",
+                  "type": "file",
+                  "size": "5.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\move_i.cur",
+                  "name": "move_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\move_il.cur",
+                  "name": "move_il.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\move_im.cur",
+                  "name": "move_im.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\move_l.cur",
+                  "name": "move_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\move_m.cur",
+                  "name": "move_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\move_r.cur",
+                  "name": "move_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\move_rl.cur",
+                  "name": "move_rl.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\move_rm.cur",
+                  "name": "move_rm.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\no_i.cur",
+                  "name": "no_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\no_il.cur",
+                  "name": "no_il.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\no_im.cur",
+                  "name": "no_im.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\no_l.cur",
+                  "name": "no_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\no_m.cur",
+                  "name": "no_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\no_r.cur",
+                  "name": "no_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\no_rl.cur",
+                  "name": "no_rl.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\no_rm.cur",
+                  "name": "no_rm.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\pen_i.cur",
+                  "name": "pen_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\pen_il.cur",
+                  "name": "pen_il.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\pen_im.cur",
+                  "name": "pen_im.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\pen_l.cur",
+                  "name": "pen_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\pen_m.cur",
+                  "name": "pen_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\pen_r.cur",
+                  "name": "pen_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\pen_rl.cur",
+                  "name": "pen_rl.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\pen_rm.cur",
+                  "name": "pen_rm.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\person.cur",
+                  "name": "person.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\piano.ani",
+                  "name": "piano.ani",
+                  "type": "file",
+                  "size": "4.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\pin.cur",
+                  "name": "pin.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\rainbow.ani",
+                  "name": "rainbow.ani",
+                  "type": "file",
+                  "size": "9.6 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\raindrop.ani",
+                  "name": "raindrop.ani",
+                  "type": "file",
+                  "size": "4.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\readme.txt",
+                  "name": "readme.txt",
+                  "type": "file",
+                  "size": "1.1 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size1_i.cur",
+                  "name": "size1_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size1_il.cur",
+                  "name": "size1_il.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size1_im.cur",
+                  "name": "size1_im.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size1_l.cur",
+                  "name": "size1_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size1_m.cur",
+                  "name": "size1_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size1_r.cur",
+                  "name": "size1_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size1_rl.cur",
+                  "name": "size1_rl.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size1_rm.cur",
+                  "name": "size1_rm.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size2_i.cur",
+                  "name": "size2_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size2_il.cur",
+                  "name": "size2_il.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size2_im.cur",
+                  "name": "size2_im.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size2_l.cur",
+                  "name": "size2_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size2_m.cur",
+                  "name": "size2_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size2_r.cur",
+                  "name": "size2_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size2_rl.cur",
+                  "name": "size2_rl.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size2_rm.cur",
+                  "name": "size2_rm.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size3_i.cur",
+                  "name": "size3_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size3_il.cur",
+                  "name": "size3_il.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size3_im.cur",
+                  "name": "size3_im.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size3_l.cur",
+                  "name": "size3_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size3_m.cur",
+                  "name": "size3_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size3_r.cur",
+                  "name": "size3_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size3_rl.cur",
+                  "name": "size3_rl.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size3_rm.cur",
+                  "name": "size3_rm.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size4_i.cur",
+                  "name": "size4_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size4_il.cur",
+                  "name": "size4_il.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size4_im.cur",
+                  "name": "size4_im.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size4_l.cur",
+                  "name": "size4_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size4_m.cur",
+                  "name": "size4_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size4_r.cur",
+                  "name": "size4_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size4_rl.cur",
+                  "name": "size4_rl.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\size4_rm.cur",
+                  "name": "size4_rm.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\sizenesw.ani",
+                  "name": "sizenesw.ani",
+                  "type": "file",
+                  "size": "0.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\sizens.ani",
+                  "name": "sizens.ani",
+                  "type": "file",
+                  "size": "0.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\sizenwse.ani",
+                  "name": "sizenwse.ani",
+                  "type": "file",
+                  "size": "0.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\sizewe.ani",
+                  "name": "sizewe.ani",
+                  "type": "file",
+                  "size": "0.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\stopwtch.ani",
+                  "name": "stopwtch.ani",
+                  "type": "file",
+                  "size": "6.6 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\up_i.cur",
+                  "name": "up_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\up_il.cur",
+                  "name": "up_il.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\up_im.cur",
+                  "name": "up_im.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\up_l.cur",
+                  "name": "up_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\up_m.cur",
+                  "name": "up_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\up_r.cur",
+                  "name": "up_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\up_rl.cur",
+                  "name": "up_rl.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\up_rm.cur",
+                  "name": "up_rm.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\vanisher.ani",
+                  "name": "vanisher.ani",
+                  "type": "file",
+                  "size": "1.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\wagtail.ani",
+                  "name": "wagtail.ani",
+                  "type": "file",
+                  "size": "2.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\wait_i.cur",
+                  "name": "wait_i.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\wait_il.cur",
+                  "name": "wait_il.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\wait_im.cur",
+                  "name": "wait_im.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\wait_l.cur",
+                  "name": "wait_l.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\wait_m.cur",
+                  "name": "wait_m.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\wait_r.cur",
+                  "name": "wait_r.cur",
+                  "type": "file",
+                  "size": "0.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\wait_rl.cur",
+                  "name": "wait_rl.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\wait_rm.cur",
+                  "name": "wait_rm.cur",
+                  "type": "file",
+                  "size": "0.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\cursors\\windows-xp-1.crs",
+                  "name": "windows-xp-1.crs",
+                  "type": "file",
+                  "size": "0.6 KB",
+                  "date": "2025-08-25"
+                }
+              ]
+            },
+            {
+              "id": "src\\assets\\fonts",
+              "name": "fonts",
+              "type": "folder",
+              "children": [
+                {
+                  "id": "src\\assets\\fonts\\ModernDOS8x14.ttf",
+                  "name": "ModernDOS8x14.ttf",
+                  "type": "file",
+                  "size": "31.1 KB",
+                  "date": "2025-11-08"
+                },
+                {
+                  "id": "src\\assets\\fonts\\ModernDOS8x16.ttf",
+                  "name": "ModernDOS8x16.ttf",
+                  "type": "file",
+                  "size": "31.4 KB",
+                  "date": "2025-11-08"
+                },
+                {
+                  "id": "src\\assets\\fonts\\ModernDOS8x8.ttf",
+                  "name": "ModernDOS8x8.ttf",
+                  "type": "file",
+                  "size": "29.6 KB",
+                  "date": "2025-11-08"
+                },
+                {
+                  "id": "src\\assets\\fonts\\ModernDOS9x14.ttf",
+                  "name": "ModernDOS9x14.ttf",
+                  "type": "file",
+                  "size": "31.1 KB",
+                  "date": "2025-11-08"
+                },
+                {
+                  "id": "src\\assets\\fonts\\ModernDOS9x16.ttf",
+                  "name": "ModernDOS9x16.ttf",
+                  "type": "file",
+                  "size": "31.4 KB",
+                  "date": "2025-11-08"
+                },
+                {
+                  "id": "src\\assets\\fonts\\PixelOperator.ttf",
+                  "name": "PixelOperator.ttf",
+                  "type": "file",
+                  "size": "16.9 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\fonts\\W95FA.ttf",
+                  "name": "W95FA.ttf",
+                  "type": "file",
+                  "size": "14.5 KB",
+                  "date": "2025-08-25"
+                }
+              ]
+            },
+            {
+              "id": "src\\assets\\icons",
+              "name": "icons",
+              "type": "folder",
+              "children": [
+                {
+                  "id": "src\\assets\\icons\\Certificate.ico",
+                  "name": "Certificate.ico",
+                  "type": "file",
+                  "size": "98.6 KB",
+                  "date": "2025-08-31"
+                },
+                {
+                  "id": "src\\assets\\icons\\GASH.ico",
+                  "name": "GASH.ico",
+                  "type": "file",
+                  "size": "97.9 KB",
+                  "date": "2026-01-09"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Applications.ico",
+                  "name": "Microsoft Windows 3 Applications.ico",
+                  "type": "file",
+                  "size": "98.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Arrow Down.ico",
+                  "name": "Microsoft Windows 3 Arrow Down.ico",
+                  "type": "file",
+                  "size": "98.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Arrow Left - Copy.ico",
+                  "name": "Microsoft Windows 3 Arrow Left - Copy.ico",
+                  "type": "file",
+                  "size": "98.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Arrow Left.ico",
+                  "name": "Microsoft Windows 3 Arrow Left.ico",
+                  "type": "file",
+                  "size": "98.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Arrow Right.ico",
+                  "name": "Microsoft Windows 3 Arrow Right.ico",
+                  "type": "file",
+                  "size": "98.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Arrow Up.ico",
+                  "name": "Microsoft Windows 3 Arrow Up.ico",
+                  "type": "file",
+                  "size": "98.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Bar Graph.ico",
+                  "name": "Microsoft Windows 3 Bar Graph.ico",
+                  "type": "file",
+                  "size": "99.1 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Binder.ico",
+                  "name": "Microsoft Windows 3 Binder.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Briefcase.ico",
+                  "name": "Microsoft Windows 3 Briefcase.ico",
+                  "type": "file",
+                  "size": "98.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Calculator.ico",
+                  "name": "Microsoft Windows 3 Calculator.ico",
+                  "type": "file",
+                  "size": "98.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Calendar.ico",
+                  "name": "Microsoft Windows 3 Calendar.ico",
+                  "type": "file",
+                  "size": "98.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Camera.ico",
+                  "name": "Microsoft Windows 3 Camera.ico",
+                  "type": "file",
+                  "size": "98.6 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Cardfile.ico",
+                  "name": "Microsoft Windows 3 Cardfile.ico",
+                  "type": "file",
+                  "size": "98.6 KB",
+                  "date": "2025-10-04"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Cassette.ico",
+                  "name": "Microsoft Windows 3 Cassette.ico",
+                  "type": "file",
+                  "size": "98.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Character Map.ico",
+                  "name": "Microsoft Windows 3 Character Map.ico",
+                  "type": "file",
+                  "size": "98.9 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Chat.ico",
+                  "name": "Microsoft Windows 3 Chat.ico",
+                  "type": "file",
+                  "size": "98.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Clipboard Viewer.ico",
+                  "name": "Microsoft Windows 3 Clipboard Viewer.ico",
+                  "type": "file",
+                  "size": "98.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 ClipBook Viewer.ico",
+                  "name": "Microsoft Windows 3 ClipBook Viewer.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Clock.ico",
+                  "name": "Microsoft Windows 3 Clock.ico",
+                  "type": "file",
+                  "size": "98.6 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Color.ico",
+                  "name": "Microsoft Windows 3 Color.ico",
+                  "type": "file",
+                  "size": "98.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Compact Disc.ico",
+                  "name": "Microsoft Windows 3 Compact Disc.ico",
+                  "type": "file",
+                  "size": "99.6 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Compose.ico",
+                  "name": "Microsoft Windows 3 Compose.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Compression.ico",
+                  "name": "Microsoft Windows 3 Compression.ico",
+                  "type": "file",
+                  "size": "99.1 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Computer.ico",
+                  "name": "Microsoft Windows 3 Computer.ico",
+                  "type": "file",
+                  "size": "98.8 KB",
+                  "date": "2025-09-29"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Control Panel.ico",
+                  "name": "Microsoft Windows 3 Control Panel.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Data Transfer.ico",
+                  "name": "Microsoft Windows 3 Data Transfer.ico",
+                  "type": "file",
+                  "size": "98.6 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Desktop.ico",
+                  "name": "Microsoft Windows 3 Desktop.ico",
+                  "type": "file",
+                  "size": "98.6 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Director.ico",
+                  "name": "Microsoft Windows 3 Director.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 DLL Setup.ico",
+                  "name": "Microsoft Windows 3 DLL Setup.ico",
+                  "type": "file",
+                  "size": "98.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 DLL.ico",
+                  "name": "Microsoft Windows 3 DLL.ico",
+                  "type": "file",
+                  "size": "98.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Documents.ico",
+                  "name": "Microsoft Windows 3 Documents.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Drivers.ico",
+                  "name": "Microsoft Windows 3 Drivers.ico",
+                  "type": "file",
+                  "size": "99.1 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 E-mail Reply.ico",
+                  "name": "Microsoft Windows 3 E-mail Reply.ico",
+                  "type": "file",
+                  "size": "99.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Education.ico",
+                  "name": "Microsoft Windows 3 Education.ico",
+                  "type": "file",
+                  "size": "98.6 KB",
+                  "date": "2026-01-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Fax Machine.ico",
+                  "name": "Microsoft Windows 3 Fax Machine.ico",
+                  "type": "file",
+                  "size": "98.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 File Manager.ico",
+                  "name": "Microsoft Windows 3 File Manager.ico",
+                  "type": "file",
+                  "size": "98.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Floppy Disks.ico",
+                  "name": "Microsoft Windows 3 Floppy Disks.ico",
+                  "type": "file",
+                  "size": "98.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Folder Cookies.ico",
+                  "name": "Microsoft Windows 3 Folder Cookies.ico",
+                  "type": "file",
+                  "size": "98.9 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Folder Internet Explorer.ico",
+                  "name": "Microsoft Windows 3 Folder Internet Explorer.ico",
+                  "type": "file",
+                  "size": "98.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Folder Linksys.ico",
+                  "name": "Microsoft Windows 3 Folder Linksys.ico",
+                  "type": "file",
+                  "size": "98.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Folder Linsys.ico",
+                  "name": "Microsoft Windows 3 Folder Linsys.ico",
+                  "type": "file",
+                  "size": "98.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Folder Open Document.ico",
+                  "name": "Microsoft Windows 3 Folder Open Document.ico",
+                  "type": "file",
+                  "size": "98.9 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Folder Open.ico",
+                  "name": "Microsoft Windows 3 Folder Open.ico",
+                  "type": "file",
+                  "size": "98.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Folder Refresh.ico",
+                  "name": "Microsoft Windows 3 Folder Refresh.ico",
+                  "type": "file",
+                  "size": "98.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Folder.ico",
+                  "name": "Microsoft Windows 3 Folder.ico",
+                  "type": "file",
+                  "size": "98.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Hand Pointing Left.ico",
+                  "name": "Microsoft Windows 3 Hand Pointing Left.ico",
+                  "type": "file",
+                  "size": "98.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Hand Pointing Right.ico",
+                  "name": "Microsoft Windows 3 Hand Pointing Right.ico",
+                  "type": "file",
+                  "size": "98.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Hand.ico",
+                  "name": "Microsoft Windows 3 Hand.ico",
+                  "type": "file",
+                  "size": "98.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 International.ico",
+                  "name": "Microsoft Windows 3 International.ico",
+                  "type": "file",
+                  "size": "99.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Keyboard.ico",
+                  "name": "Microsoft Windows 3 Keyboard.ico",
+                  "type": "file",
+                  "size": "98.6 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Keys.ico",
+                  "name": "Microsoft Windows 3 Keys.ico",
+                  "type": "file",
+                  "size": "99.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Line Chart Data.ico",
+                  "name": "Microsoft Windows 3 Line Chart Data.ico",
+                  "type": "file",
+                  "size": "98.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Line Graph.ico",
+                  "name": "Microsoft Windows 3 Line Graph.ico",
+                  "type": "file",
+                  "size": "97.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Local Area Network.ico",
+                  "name": "Microsoft Windows 3 Local Area Network.ico",
+                  "type": "file",
+                  "size": "98.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Logo.ico",
+                  "name": "Microsoft Windows 3 Logo.ico",
+                  "type": "file",
+                  "size": "99.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Mail.ico",
+                  "name": "Microsoft Windows 3 Mail.ico",
+                  "type": "file",
+                  "size": "98.9 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Mailbox.ico",
+                  "name": "Microsoft Windows 3 Mailbox.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Manilla Envelope.ico",
+                  "name": "Microsoft Windows 3 Manilla Envelope.ico",
+                  "type": "file",
+                  "size": "98.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Media Player.ico",
+                  "name": "Microsoft Windows 3 Media Player.ico",
+                  "type": "file",
+                  "size": "99.1 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Minesweeper.ico",
+                  "name": "Microsoft Windows 3 Minesweeper.ico",
+                  "type": "file",
+                  "size": "98.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Mona Lisa.ico",
+                  "name": "Microsoft Windows 3 Mona Lisa.ico",
+                  "type": "file",
+                  "size": "99.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Mouse.ico",
+                  "name": "Microsoft Windows 3 Mouse.ico",
+                  "type": "file",
+                  "size": "98.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 MS-DOS Prompt.ico",
+                  "name": "Microsoft Windows 3 MS-DOS Prompt.ico",
+                  "type": "file",
+                  "size": "99.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Newspaper.ico",
+                  "name": "Microsoft Windows 3 Newspaper.ico",
+                  "type": "file",
+                  "size": "98.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Notepad.ico",
+                  "name": "Microsoft Windows 3 Notepad.ico",
+                  "type": "file",
+                  "size": "98.9 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Object Packager.ico",
+                  "name": "Microsoft Windows 3 Object Packager.ico",
+                  "type": "file",
+                  "size": "99.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Paint Tools.ico",
+                  "name": "Microsoft Windows 3 Paint Tools.ico",
+                  "type": "file",
+                  "size": "99.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Phone Dial.ico",
+                  "name": "Microsoft Windows 3 Phone Dial.ico",
+                  "type": "file",
+                  "size": "99.1 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Planner.ico",
+                  "name": "Microsoft Windows 3 Planner.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Ports.ico",
+                  "name": "Microsoft Windows 3 Ports.ico",
+                  "type": "file",
+                  "size": "98.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Post-It.ico",
+                  "name": "Microsoft Windows 3 Post-It.ico",
+                  "type": "file",
+                  "size": "99.1 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Print Manager.ico",
+                  "name": "Microsoft Windows 3 Print Manager.ico",
+                  "type": "file",
+                  "size": "98.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Read Me.ico",
+                  "name": "Microsoft Windows 3 Read Me.ico",
+                  "type": "file",
+                  "size": "98.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Recorder.ico",
+                  "name": "Microsoft Windows 3 Recorder.ico",
+                  "type": "file",
+                  "size": "99.1 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Registry Edit.ico",
+                  "name": "Microsoft Windows 3 Registry Edit.ico",
+                  "type": "file",
+                  "size": "99.1 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Remote Access.ico",
+                  "name": "Microsoft Windows 3 Remote Access.ico",
+                  "type": "file",
+                  "size": "99.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Safe.ico",
+                  "name": "Microsoft Windows 3 Safe.ico",
+                  "type": "file",
+                  "size": "98.9 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Schedule.ico",
+                  "name": "Microsoft Windows 3 Schedule.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Server.ico",
+                  "name": "Microsoft Windows 3 Server.ico",
+                  "type": "file",
+                  "size": "98.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Setup.ico",
+                  "name": "Microsoft Windows 3 Setup.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Shortcut.ico",
+                  "name": "Microsoft Windows 3 Shortcut.ico",
+                  "type": "file",
+                  "size": "97.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Solitaire.ico",
+                  "name": "Microsoft Windows 3 Solitaire.ico",
+                  "type": "file",
+                  "size": "98.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Sound Recorder.ico",
+                  "name": "Microsoft Windows 3 Sound Recorder.ico",
+                  "type": "file",
+                  "size": "99.2 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Sound.ico",
+                  "name": "Microsoft Windows 3 Sound.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Swiss Army Knife.ico",
+                  "name": "Microsoft Windows 3 Swiss Army Knife.ico",
+                  "type": "file",
+                  "size": "99.1 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Terminal.ico",
+                  "name": "Microsoft Windows 3 Terminal.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Tools.ico",
+                  "name": "Microsoft Windows 3 Tools.ico",
+                  "type": "file",
+                  "size": "98.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Typewriter.ico",
+                  "name": "Microsoft Windows 3 Typewriter.ico",
+                  "type": "file",
+                  "size": "98.9 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Waste Basket Empty.ico",
+                  "name": "Microsoft Windows 3 Waste Basket Empty.ico",
+                  "type": "file",
+                  "size": "99.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Waste Basket Full.ico",
+                  "name": "Microsoft Windows 3 Waste Basket Full.ico",
+                  "type": "file",
+                  "size": "99.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Window Blank.ico",
+                  "name": "Microsoft Windows 3 Window Blank.ico",
+                  "type": "file",
+                  "size": "98.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Window Excel.ico",
+                  "name": "Microsoft Windows 3 Window Excel.ico",
+                  "type": "file",
+                  "size": "98.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Window Modem.ico",
+                  "name": "Microsoft Windows 3 Window Modem.ico",
+                  "type": "file",
+                  "size": "98.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Window MS-DOS.ico",
+                  "name": "Microsoft Windows 3 Window MS-DOS.ico",
+                  "type": "file",
+                  "size": "98.7 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Window Word.ico",
+                  "name": "Microsoft Windows 3 Window Word.ico",
+                  "type": "file",
+                  "size": "98.5 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Microsoft Windows 3 Wordpad.ico",
+                  "name": "Microsoft Windows 3 Wordpad.ico",
+                  "type": "file",
+                  "size": "98.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\assets\\icons\\Tree.ico",
+                  "name": "Tree.ico",
+                  "type": "file",
+                  "size": "98.7 KB",
+                  "date": "2025-09-29"
+                }
+              ]
+            },
+            {
+              "id": "src\\assets\\images",
+              "name": "images",
+              "type": "folder",
+              "children": [
+                {
+                  "id": "src\\assets\\images\\startup-card-1.png",
+                  "name": "startup-card-1.png",
+                  "type": "file",
+                  "size": "209.1 KB",
+                  "date": "2025-09-30"
+                }
+              ]
+            },
+            {
+              "id": "src\\assets\\react.svg",
+              "name": "react.svg",
+              "type": "file",
+              "size": "4.0 KB",
+              "date": "2025-08-25"
+            }
+          ]
+        },
+        {
+          "id": "src\\components",
+          "name": "components",
+          "type": "folder",
+          "children": [
+            {
+              "id": "src\\components\\Desktop.jsx",
+              "name": "Desktop.jsx",
+              "type": "file",
+              "size": "9.8 KB",
+              "date": "2026-01-25"
+            },
+            {
+              "id": "src\\components\\Dialog.jsx",
+              "name": "Dialog.jsx",
+              "type": "file",
+              "size": "1.7 KB",
+              "date": "2026-01-25"
+            },
+            {
+              "id": "src\\components\\DialogWindow.jsx",
+              "name": "DialogWindow.jsx",
+              "type": "file",
+              "size": "2.6 KB",
+              "date": "2026-01-25"
+            },
+            {
+              "id": "src\\components\\DraggableItem.jsx",
+              "name": "DraggableItem.jsx",
+              "type": "file",
+              "size": "5.6 KB",
+              "date": "2026-01-16"
+            },
+            {
+              "id": "src\\components\\Explorer.jsx",
+              "name": "Explorer.jsx",
+              "type": "file",
+              "size": "1.6 KB",
+              "date": "2026-01-15"
+            },
+            {
+              "id": "src\\components\\Folder.jsx",
+              "name": "Folder.jsx",
+              "type": "file",
+              "size": "1.2 KB",
+              "date": "2025-12-15"
+            },
+            {
+              "id": "src\\components\\Icon.jsx",
+              "name": "Icon.jsx",
+              "type": "file",
+              "size": "1.5 KB",
+              "date": "2026-01-16"
+            },
+            {
+              "id": "src\\components\\LoadingScreen.jsx",
+              "name": "LoadingScreen.jsx",
+              "type": "file",
+              "size": "10.1 KB",
+              "date": "2026-01-24"
+            },
+            {
+              "id": "src\\components\\MenuBar.jsx",
+              "name": "MenuBar.jsx",
+              "type": "file",
+              "size": "2.5 KB",
+              "date": "2026-01-25"
+            },
+            {
+              "id": "src\\components\\Taskbar.jsx",
+              "name": "Taskbar.jsx",
+              "type": "file",
+              "size": "1.2 KB",
+              "date": "2025-12-11"
+            },
+            {
+              "id": "src\\components\\Window.jsx",
+              "name": "Window.jsx",
+              "type": "file",
+              "size": "6.0 KB",
+              "date": "2026-01-24"
+            }
+          ]
+        },
+        {
+          "id": "src\\config",
+          "name": "config",
+          "type": "folder",
+          "children": [
+            {
+              "id": "src\\config\\programConfig.jsx",
+              "name": "programConfig.jsx",
+              "type": "file",
+              "size": "9.6 KB",
+              "date": "2026-01-25"
+            }
+          ]
+        },
+        {
+          "id": "src\\css",
+          "name": "css",
+          "type": "folder",
+          "children": [
+            {
+              "id": "src\\css\\base.css",
+              "name": "base.css",
+              "type": "file",
+              "size": "0.9 KB",
+              "date": "2026-01-15"
+            },
+            {
+              "id": "src\\css\\components.css",
+              "name": "components.css",
+              "type": "file",
+              "size": "1.2 KB",
+              "date": "2025-11-24"
+            },
+            {
+              "id": "src\\css\\Desktop.css",
+              "name": "Desktop.css",
+              "type": "file",
+              "size": "0.5 KB",
+              "date": "2025-12-28"
+            },
+            {
+              "id": "src\\css\\Dialog.css",
+              "name": "Dialog.css",
+              "type": "file",
+              "size": "0.7 KB",
+              "date": "2026-01-25"
+            },
+            {
+              "id": "src\\css\\Explorer.css",
+              "name": "Explorer.css",
+              "type": "file",
+              "size": "2.5 KB",
+              "date": "2025-10-05"
+            },
+            {
+              "id": "src\\css\\Icon.css",
+              "name": "Icon.css",
+              "type": "file",
+              "size": "1.4 KB",
+              "date": "2026-01-24"
+            },
+            {
+              "id": "src\\css\\LoadingScreen.css",
+              "name": "LoadingScreen.css",
+              "type": "file",
+              "size": "2.1 KB",
+              "date": "2026-01-14"
+            },
+            {
+              "id": "src\\css\\MenuBar.css",
+              "name": "MenuBar.css",
+              "type": "file",
+              "size": "1.0 KB",
+              "date": "2026-01-24"
+            },
+            {
+              "id": "src\\css\\Taskbar.css",
+              "name": "Taskbar.css",
+              "type": "file",
+              "size": "2.2 KB",
+              "date": "2026-01-24"
+            },
+            {
+              "id": "src\\css\\variables.css",
+              "name": "variables.css",
+              "type": "file",
+              "size": "1.5 KB",
+              "date": "2025-12-08"
+            },
+            {
+              "id": "src\\css\\Window.css",
+              "name": "Window.css",
+              "type": "file",
+              "size": "4.6 KB",
+              "date": "2026-01-25"
+            }
+          ]
+        },
+        {
+          "id": "src\\data",
+          "name": "data",
+          "type": "folder",
+          "children": [
+            {
+              "id": "src\\data\\cursors.js",
+              "name": "cursors.js",
+              "type": "file",
+              "size": "1.3 KB",
+              "date": "2026-01-25"
+            },
+            {
+              "id": "src\\data\\filesystem.json",
+              "name": "filesystem.json",
+              "type": "file",
+              "size": "125.0 KB",
+              "date": "2026-01-25"
+            },
+            {
+              "id": "src\\data\\skills.js",
+              "name": "skills.js",
+              "type": "file",
+              "size": "0.6 KB",
+              "date": "2026-01-24"
+            },
+            {
+              "id": "src\\data\\sounds.js",
+              "name": "sounds.js",
+              "type": "file",
+              "size": "2.8 KB",
+              "date": "2025-12-08"
+            }
+          ]
+        },
+        {
+          "id": "src\\features",
+          "name": "features",
+          "type": "folder",
+          "children": [
+            {
+              "id": "src\\features\\About",
+              "name": "About",
+              "type": "folder",
+              "children": [
+                {
+                  "id": "src\\features\\About\\About.css",
+                  "name": "About.css",
+                  "type": "file",
+                  "size": "3.7 KB",
+                  "date": "2026-01-25"
+                },
+                {
+                  "id": "src\\features\\About\\About.jsx",
+                  "name": "About.jsx",
+                  "type": "file",
+                  "size": "7.5 KB",
+                  "date": "2026-01-30"
+                },
+                {
+                  "id": "src\\features\\About\\Microsoft Windows 3 Documents.ico",
+                  "name": "Microsoft Windows 3 Documents.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\features\\About\\Microsoft Windows 3 Folder Open Document.ico",
+                  "name": "Microsoft Windows 3 Folder Open Document.ico",
+                  "type": "file",
+                  "size": "98.9 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\features\\About\\Microsoft Windows 3 Folder.ico",
+                  "name": "Microsoft Windows 3 Folder.ico",
+                  "type": "file",
+                  "size": "98.4 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\features\\About\\Nguyen-Minh-Khoi-CV.pdf",
+                  "name": "Nguyen-Minh-Khoi-CV.pdf",
+                  "type": "file",
+                  "size": "1044.1 KB",
+                  "date": "2026-01-30"
+                },
+                {
+                  "id": "src\\features\\About\\portrait.jpg",
+                  "name": "portrait.jpg",
+                  "type": "file",
+                  "size": "144.0 KB",
+                  "date": "2025-12-27"
+                }
+              ]
+            },
+            {
+              "id": "src\\features\\Contact",
+              "name": "Contact",
+              "type": "folder",
+              "children": [
+                {
+                  "id": "src\\features\\Contact\\Contact.css",
+                  "name": "Contact.css",
+                  "type": "file",
+                  "size": "1.3 KB",
+                  "date": "2025-09-30"
+                },
+                {
+                  "id": "src\\features\\Contact\\Contact.jsx",
+                  "name": "Contact.jsx",
+                  "type": "file",
+                  "size": "2.3 KB",
+                  "date": "2026-01-25"
+                },
+                {
+                  "id": "src\\features\\Contact\\Microsoft Windows 3 International.ico",
+                  "name": "Microsoft Windows 3 International.ico",
+                  "type": "file",
+                  "size": "99.3 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\features\\Contact\\Microsoft Windows 3 Mail.ico",
+                  "name": "Microsoft Windows 3 Mail.ico",
+                  "type": "file",
+                  "size": "98.9 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\features\\Contact\\Microsoft Windows 3 Mailbox.ico",
+                  "name": "Microsoft Windows 3 Mailbox.ico",
+                  "type": "file",
+                  "size": "99.0 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\features\\Contact\\Microsoft Windows 3 Phone Dial.ico",
+                  "name": "Microsoft Windows 3 Phone Dial.ico",
+                  "type": "file",
+                  "size": "99.1 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\features\\Contact\\nmk.svg",
+                  "name": "nmk.svg",
+                  "type": "file",
+                  "size": "1.5 KB",
+                  "date": "2025-08-25"
+                }
+              ]
+            },
+            {
+              "id": "src\\features\\FileManager",
+              "name": "FileManager",
+              "type": "folder",
+              "children": [
+                {
+                  "id": "src\\features\\FileManager\\FileManager.css",
+                  "name": "FileManager.css",
+                  "type": "file",
+                  "size": "3.6 KB",
+                  "date": "2026-01-25"
+                },
+                {
+                  "id": "src\\features\\FileManager\\FileManager.jsx",
+                  "name": "FileManager.jsx",
+                  "type": "file",
+                  "size": "5.8 KB",
+                  "date": "2026-01-24"
+                }
+              ]
+            },
+            {
+              "id": "src\\features\\Message",
+              "name": "Message",
+              "type": "folder",
+              "children": [
+                {
+                  "id": "src\\features\\Message\\chord.mp3",
+                  "name": "chord.mp3",
+                  "type": "file",
+                  "size": "29.9 KB",
+                  "date": "2025-08-29"
+                },
+                {
+                  "id": "src\\features\\Message\\ding.mp3",
+                  "name": "ding.mp3",
+                  "type": "file",
+                  "size": "26.8 KB",
+                  "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\features\\Message\\Message.css",
+                  "name": "Message.css",
+                  "type": "file",
+                  "size": "1.0 KB",
+                  "date": "2025-12-27"
+                },
+                {
+                  "id": "src\\features\\Message\\Message.jsx",
+                  "name": "Message.jsx",
+                  "type": "file",
+                  "size": "1.8 KB",
+                  "date": "2025-12-11"
+                }
+              ]
+            },
+            {
+              "id": "src\\features\\StarShow",
+              "name": "StarShow",
+              "type": "folder",
+              "children": [
+                {
+                  "id": "src\\features\\StarShow\\hammer-sickle-1.png",
+                  "name": "hammer-sickle-1.png",
+                  "type": "file",
+                  "size": "4.4 KB",
+                  "date": "2025-10-05"
+                },
+                {
+                  "id": "src\\features\\StarShow\\hammer-sickle-2.png",
+                  "name": "hammer-sickle-2.png",
+                  "type": "file",
+                  "size": "4.2 KB",
+                  "date": "2025-10-05"
+                },
+                {
+                  "id": "src\\features\\StarShow\\hammer-sickle-3.png",
+                  "name": "hammer-sickle-3.png",
+                  "type": "file",
+                  "size": "4.0 KB",
+                  "date": "2025-10-05"
+                },
+                {
+                  "id": "src\\features\\StarShow\\hammer-sickle-4.png",
+                  "name": "hammer-sickle-4.png",
+                  "type": "file",
+                  "size": "4.0 KB",
+                  "date": "2025-10-05"
+                },
+                {
+                  "id": "src\\features\\StarShow\\hammer-sickle-5.png",
+                  "name": "hammer-sickle-5.png",
+                  "type": "file",
+                  "size": "4.3 KB",
+                  "date": "2025-10-06"
+                },
+                {
+                  "id": "src\\features\\StarShow\\hammer-sickle.png",
+                  "name": "hammer-sickle.png",
+                  "type": "file",
+                  "size": "4.3 KB",
+                  "date": "2025-10-05"
+                },
+                {
+                  "id": "src\\features\\StarShow\\star-1.png",
+                  "name": "star-1.png",
+                  "type": "file",
+                  "size": "3.3 KB",
+                  "date": "2025-10-05"
+                },
+                {
+                  "id": "src\\features\\StarShow\\star-2.png",
+                  "name": "star-2.png",
+                  "type": "file",
+                  "size": "3.2 KB",
+                  "date": "2025-10-05"
+                },
+                {
+                  "id": "src\\features\\StarShow\\star-3.png",
+                  "name": "star-3.png",
+                  "type": "file",
+                  "size": "3.1 KB",
+                  "date": "2025-10-05"
+                },
+                {
+                  "id": "src\\features\\StarShow\\star-4.png",
+                  "name": "star-4.png",
+                  "type": "file",
+                  "size": "3.0 KB",
+                  "date": "2025-10-05"
+                },
+                {
+                  "id": "src\\features\\StarShow\\star-5.png",
+                  "name": "star-5.png",
+                  "type": "file",
+                  "size": "3.3 KB",
+                  "date": "2025-10-06"
+                },
+                {
+                  "id": "src\\features\\StarShow\\star.png",
+                  "name": "star.png",
+                  "type": "file",
+                  "size": "3.3 KB",
+                  "date": "2025-10-05"
+                },
+                {
+                  "id": "src\\features\\StarShow\\StarShow.css",
+                  "name": "StarShow.css",
+                  "type": "file",
+                  "size": "0.2 KB",
+                  "date": "2025-10-04"
+                },
+                {
+                  "id": "src\\features\\StarShow\\StarShow.jsx",
+                  "name": "StarShow.jsx",
+                  "type": "file",
+                  "size": "3.9 KB",
+                  "date": "2025-12-11"
+                }
+              ]
+            },
+            {
+              "id": "src\\features\\VideoPlayer",
+              "name": "VideoPlayer",
+              "type": "folder",
+              "children": [
+                {
+                  "id": "src\\features\\VideoPlayer\\VideoPlayer.css",
+                  "name": "VideoPlayer.css",
+                  "type": "file",
+                  "size": "3.4 KB",
+                  "date": "2026-01-19"
+                },
+                {
+                  "id": "src\\features\\VideoPlayer\\VideoPlayer.jsx",
+                  "name": "VideoPlayer.jsx",
+                  "type": "file",
+                  "size": "5.2 KB",
+                  "date": "2026-01-17"
+                }
+              ]
+            },
+            {
+              "id": "src\\features\\Welcome",
+              "name": "Welcome",
+              "type": "folder",
+              "children": [
+                {
+                  "id": "src\\features\\Welcome\\Welcome.css",
+                  "name": "Welcome.css",
+                  "type": "file",
+                  "size": "2.4 KB",
+                  "date": "2026-01-25"
+                },
+                {
+                  "id": "src\\features\\Welcome\\Welcome.jsx",
+                  "name": "Welcome.jsx",
+                  "type": "file",
+                  "size": "4.9 KB",
+                  "date": "2026-01-25"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "src\\hooks",
+          "name": "hooks",
+          "type": "folder",
+          "children": [
+            {
+              "id": "src\\hooks\\useContrastColor.js",
+              "name": "useContrastColor.js",
+              "type": "file",
+              "size": "4.6 KB",
+              "date": "2025-08-25"
+            },
+            {
+              "id": "src\\hooks\\useDesktop.js",
+              "name": "useDesktop.js",
+              "type": "file",
+              "size": "3.5 KB",
+              "date": "2025-12-11"
+            },
+            {
+              "id": "src\\hooks\\useDragDrop.js",
+              "name": "useDragDrop.js",
+              "type": "file",
+              "size": "6.3 KB",
+              "date": "2026-01-16"
+            },
+            {
+              "id": "src\\hooks\\useLoadingScreen.js",
+              "name": "useLoadingScreen.js",
+              "type": "file",
+              "size": "5.4 KB",
+              "date": "2026-01-24"
+            },
+            {
+              "id": "src\\hooks\\useMessageForm.js",
+              "name": "useMessageForm.js",
+              "type": "file",
+              "size": "4.3 KB",
+              "date": "2026-01-24"
+            },
+            {
+              "id": "src\\hooks\\useShutdown.js",
+              "name": "useShutdown.js",
+              "type": "file",
+              "size": "2.3 KB",
+              "date": "2026-01-24"
+            },
+            {
+              "id": "src\\hooks\\useWindow.js",
+              "name": "useWindow.js",
+              "type": "file",
+              "size": "2.8 KB",
+              "date": "2025-12-11"
+            },
+            {
+              "id": "src\\hooks\\useWindowInstance.js",
+              "name": "useWindowInstance.js",
+              "type": "file",
+              "size": "8.6 KB",
+              "date": "2026-01-24"
+            },
+            {
+              "id": "src\\hooks\\useWindowManager.js",
+              "name": "useWindowManager.js",
+              "type": "file",
+              "size": "4.4 KB",
+              "date": "2026-01-24"
+            }
+          ]
+        },
+        {
+          "id": "src\\App.css",
+          "name": "App.css",
+          "type": "file",
+          "size": "0.8 KB",
+          "date": "2025-12-08"
+        },
+        {
+          "id": "src\\App.jsx",
+          "name": "App.jsx",
+          "type": "file",
+          "size": "1.2 KB",
+          "date": "2026-01-25"
+        },
+        {
+          "id": "src\\index.css",
+          "name": "index.css",
+          "type": "file",
+          "size": "0.6 KB",
+          "date": "2025-12-08"
+        },
+        {
+          "id": "src\\main.jsx",
+          "name": "main.jsx",
+          "type": "file",
+          "size": "0.4 KB",
+          "date": "2025-12-08"
+        }
+      ]
+    },
+    {
+      "id": ".env",
+      "name": ".env",
+      "type": "file",
+      "size": "0.2 KB",
+      "date": "2025-08-25"
+    },
+    {
+      "id": ".gitignore",
+      "name": ".gitignore",
+      "type": "file",
+      "size": "0.3 KB",
+      "date": "2026-01-30"
+    },
+    {
+      "id": ".prettierignore",
+      "name": ".prettierignore",
+      "type": "file",
+      "size": "0.0 KB",
+      "date": "2026-01-24"
+    },
+    {
+      "id": ".prettierrc",
+      "name": ".prettierrc",
+      "type": "file",
+      "size": "0.1 KB",
+      "date": "2026-01-24"
+    },
+    {
+      "id": "eslint.config.js",
+      "name": "eslint.config.js",
+      "type": "file",
+      "size": "0.9 KB",
+      "date": "2025-08-25"
+    },
+    {
+      "id": "index.html",
+      "name": "index.html",
+      "type": "file",
+      "size": "1.6 KB",
+      "date": "2026-01-25"
+    },
+    {
+      "id": "package.json",
+      "name": "package.json",
+      "type": "file",
+      "size": "1.0 KB",
+      "date": "2026-01-24"
+    },
+    {
+      "id": "README.md",
+      "name": "README.md",
+      "type": "file",
+      "size": "0.8 KB",
+      "date": "2025-08-25"
+    },
+    {
+      "id": "vite.config.js",
+      "name": "vite.config.js",
+      "type": "file",
+      "size": "1.0 KB",
+      "date": "2025-08-25"
+    }
+  ]
+}

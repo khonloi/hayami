@@ -73,7 +73,7 @@ const Contact = memo(() => {
         <img src={nmkSvg} alt="Monogram" className="monogram" />
         <div className="contact-title-group">
           <h2 className="name">Nguyen Minh Khoi</h2>
-          <p className="title">Full Stack Developer</p>
+          <p className="title">Full Stack Web Developer</p>
         </div>
       </div>
       {contactItems}

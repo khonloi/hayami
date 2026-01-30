@@ -19,6 +19,17 @@ export const setCursorVariables = () => {
   root.style.setProperty('--cursor-link', `url(${defaultLink}), pointer`);
   root.style.setProperty('--cursor-wait', `url(${defaultWait}), wait`);
   root.style.setProperty('--cursor-busy', `url(${defaultBusy}), wait`);
+  
+  // Kick off preloading immediately
+  preloadCursors();
+};
+
+// Preload cursor files to prevent flickers
+export const preloadCursors = () => {
+  Object.values(cursors).forEach(url => {
+    const img = new Image();
+    img.src = url;
+  });
 };
 
 // Get cursor style value

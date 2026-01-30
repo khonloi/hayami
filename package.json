@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node scripts/generateFilesystem.js && vite",
+    "build": "node scripts/generateFilesystem.js && vite build",
     "lint": "eslint .",
     "format": "prettier --write .",
     "preview": "vite preview",

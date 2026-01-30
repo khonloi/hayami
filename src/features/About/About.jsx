@@ -6,6 +6,12 @@ import docIcon from "../../assets/icons/Microsoft Windows 3 Documents.ico";
 import portraitImage from "./portrait.jpg";
 import { SKILLS_DATA } from "../../data/skills";
 
+import swissKnifeIcon from "../../assets/icons/Microsoft Windows 3 Swiss Army Knife.ico";
+import educationIcon from "../../assets/icons/Microsoft Windows 3 Education.ico";
+import briefcaseIcon from "../../assets/icons/Microsoft Windows 3 Briefcase.ico";
+import cvFile from "./Nguyen-Minh-Khoi-CV.pdf";
+
+
 // Initial folder states
 const INITIAL_FOLDER_STATES = SKILLS_DATA.reduce((acc, folder) => {
   acc[folder.id] = true;
@@ -23,6 +29,16 @@ const About = memo(() => {
       [folderId]: !prev[folderId],
     }));
   }, []);
+
+  const handleExport = useCallback(() => {
+    const link = document.createElement("a");
+    link.href = cvFile;
+    link.download = "Nguyen-Minh-Khoi-CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }, []);
+
 
   // Memoize skills sections to prevent unnecessary re-renders
   const skillsSections = useMemo(
@@ -72,15 +88,24 @@ const About = memo(() => {
           <img src={portraitImage} alt="Portrait" className="portrait-image" />
           <div className="header-group">
             <h2 className="name">Nguyen Minh Khoi</h2>
-            <p className="title">Full Stack Developer</p>
+            <p className="title">Full Stack Web Developer</p>
           </div>
-          <button className="window-button program-button" style={{ marginLeft: 'auto' }}>Export</button>
+          <button
+            className="window-button program-button"
+            style={{ marginLeft: 'auto' }}
+            onClick={handleExport}
+          >
+            Export
+          </button>
         </div>
 
         <div className="section">
-          <h3 className="section-title">🎯 Professional Summary</h3>
+          <h3 className="section-title">
+            <img src={swissKnifeIcon} alt="" className="section-icon" />
+            Professional Summary
+          </h3>
           <p className="section-text">
-            Full Stack Developer with hands-on experience building scalable web
+            Full Stack Web Developer with hands-on experience building scalable web
             applications using modern JavaScript frameworks. Proficient in
             front-end development with React.js and responsive UI design, and
             back-end development with Node.js and Express.js. Skilled in optimizing API
@@ -91,7 +116,10 @@ const About = memo(() => {
         </div>
 
         <div className="section">
-          <h3 className="section-title">🎓 Education</h3>
+          <h3 className="section-title">
+            <img src={educationIcon} alt="" className="section-icon" />
+            Education
+          </h3>
           <div className="education-box">
             <div className="education-degree">
               Bachelor of Software Engineer
@@ -118,9 +146,12 @@ const About = memo(() => {
         </div>
 
         <div className="section">
-          <h3 className="section-title">💼 Experience</h3>
+          <h3 className="section-title">
+            <img src={briefcaseIcon} alt="" className="section-icon" />
+            Experience
+          </h3>
           <div className="education-box">
-            <div className="education-degree">Full Stack Developer Intern</div>
+            <div className="education-degree">Full Stack Web Developer Intern</div>
             <div className="education-details">
               UTA Solutions • September 2024 − January 2025
             </div>
