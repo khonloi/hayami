@@ -1,5 +1,5 @@
 import React, { useState, useMemo, memo, useCallback } from "react";
-import "./welcome.css";
+import "./Welcome.css";
 
 // Content data extracted for better maintainability
 const WELCOME_CONTENT = {
