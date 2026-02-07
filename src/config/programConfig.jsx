@@ -106,11 +106,11 @@ export const desktopItems = [
     contents: [
       {
         id: "portfolio",
-        label: "GOMI 3",
+        label: "Hayami 3",
         iconSrc: logoIcon,
         type: "icon",
         isMaximizable: false,
-        link: "https://khonloi.github.io/retro-homepage/",
+        link: "https://khonloi.github.io/hayami/",
       },
       {
         id: "gash1",

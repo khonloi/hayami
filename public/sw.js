@@ -1,11 +1,11 @@
 // Service Worker for caching
-const CACHE_NAME = 'retro-homepage-v1';
+const CACHE_NAME = 'hayami-v1';
 const urlsToCache = [
-  '/retro-homepage/',
-  '/retro-homepage/index.html',
-  '/retro-homepage/assets/',
-  '/retro-homepage/sounds/',
-  '/retro-homepage/src/assets/'
+  '/hayami/',
+  '/hayami/index.html',
+  '/hayami/assets/',
+  '/hayami/sounds/',
+  '/hayami/src/assets/'
 ];
 
 // Install event - cache resources

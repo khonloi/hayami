@@ -32,7 +32,7 @@ const LoadingScreen = ({
     }
     return [
       "V8 JavaScript Engine v12.4 - Energy Efficient Mode",
-      "Copyright (C) 1984-2026 Kaison Computer Company",
+      "Copyright (C) 1984-2026 Kaison Computer Co, LTD",
       "",
       "⠀",
       "",
@@ -175,7 +175,7 @@ const LoadingScreen = ({
         "  Linter Module .......... 9.25.0 [OK] ",
         "  Static Deploy Util ..... 6.3.0  [OK] ",
         "",
-        "Starting GOMI 3 ... ",
+        "Starting Hayami 3 ... ",
       ];
       const delays = [850, 650, 1200, 750, 900, 550, 1000, 800, 2000];
 

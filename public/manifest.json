@@ -2,15 +2,18 @@
   "name": "ＰＡＮＥ９７",
   "short_name": "PANE97",
   "description": "Retro Windows 95/98 style homepage",
-  "start_url": "/retro-homepage/",
+  "start_url": "/hayami/",
   "display": "standalone",
   "icons": [
     {
-      "src": "/retro-homepage/favicon.ico",
+      "src": "/hayami/favicon.ico",
       "sizes": "16x16",
       "type": "image/x-icon"
     }
   ],
-  "categories": ["entertainment", "productivity"],
+  "categories": [
+    "entertainment",
+    "productivity"
+  ],
   "lang": "en"
-} 
+}

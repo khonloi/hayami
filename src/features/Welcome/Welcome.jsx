@@ -122,7 +122,7 @@ const Welcome = memo(() => {
       <div className="welcome-header">
         <span className="welcome-header-prefix">Welcome to </span>
         <img src={TreeIcon} alt="Tree" className="welcome-header-icon" />
-        <h1 className="welcome-header-title">GOMI 3</h1>
+        <h1 className="welcome-header-title">Hayami 3</h1>
       </div>
       <div className="welcome-main-layout">
         <div className="welcome-buttons-group">

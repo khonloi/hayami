@@ -19,7 +19,7 @@ function buildTree(dir, relativePath = '') {
     
     return {
       id: relativePath || 'root',
-      name: name === 'retro-homepage' ? 'retro-homepage' : name,
+      name: name === 'hayami' ? 'hayami' : name,
       type: 'folder',
       children: children.sort((a, b) => {
         if (a.type === b.type) return a.name.localeCompare(b.name);

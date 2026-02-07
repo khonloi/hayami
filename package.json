@@ -1,5 +1,5 @@
 {
-  "name": "retro-homepage",
+  "name": "hayami",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -32,5 +32,5 @@
     "prettier": "^3.8.1",
     "vite": "^6.3.5"
   },
-  "homepage": "https://khonloi.github.io/retro-homepage"
+  "homepage": "https://khonloi.github.io/hayami"
 }
