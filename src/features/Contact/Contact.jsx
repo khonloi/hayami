@@ -5,6 +5,7 @@ import phoneIcon from './Microsoft Windows 3 Phone Dial.ico';
 import mailIcon from './Microsoft Windows 3 Mail.ico';
 import globeIcon from './Microsoft Windows 3 International.ico';
 import nmkSvg from './nmk.svg';
+import qrCode from './qrcode.png';
 
 // Contact information data structure
 const CONTACT_INFO = [
@@ -12,7 +13,7 @@ const CONTACT_INFO = [
     id: 'phone',
     icon: phoneIcon,
     label: 'Phone',
-    value: '(+84) 35710 6894',
+    value: '(+84) 35 710 6894',
     href: 'tel:+84357106894',
     isLink: true,
     className: 'phone-email',
@@ -21,8 +22,8 @@ const CONTACT_INFO = [
     id: 'email',
     icon: mailIcon,
     label: 'Email',
-    value: 'nguyenminhkhoi3913@gmail.com',
-    href: 'mailto:nguyenminhkhoi3913@gmail.com',
+    value: 'khoinm.business@gmail.com',
+    href: 'mailto:khoinm.business@gmail.com',
     isLink: true,
     className: 'phone-email',
   },
@@ -30,8 +31,8 @@ const CONTACT_INFO = [
     id: 'website',
     icon: globeIcon,
     label: 'Website',
-    value: 'https://khonloi.github.io/hayami',
-    href: 'https://khonloi.github.io/hayami',
+    value: 'https://khoinm.vercel.app',
+    href: 'https://khoinm.vercel.app',
     isLink: true,
     className: 'phone-email',
   },
@@ -70,10 +71,15 @@ const Contact = memo(() => {
   return (
     <div className="contact-container">
       <div className="contact-title">
-        <img src={nmkSvg} alt="Monogram" className="monogram" />
-        <div className="contact-title-group">
-          <h2 className="name">Nguyen Minh Khoi</h2>
-          <p className="title">Full Stack Web Developer</p>
+        <div className="contact-header-left">
+          <img src={nmkSvg} alt="Monogram" className="monogram" />
+          <div className="contact-title-group">
+            <h2 className="name">Nguyen Minh Khoi</h2>
+            <p className="title">Full Stack Web Developer</p>
+          </div>
+        </div>
+        <div className="contact-qr-container">
+          <img src={qrCode} alt="QR Code" className="qr-code" />
         </div>
       </div>
       {contactItems}

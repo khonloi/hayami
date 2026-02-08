@@ -83,13 +83,13 @@
           "name": "manifest.json",
           "type": "file",
           "size": "0.4 KB",
-          "date": "2026-02-07"
+          "date": "2026-02-08"
         },
         {
           "id": "public\\sw.js",
           "name": "sw.js",
           "type": "file",
-          "size": "1.7 KB",
+          "size": "1.6 KB",
           "date": "2026-02-08"
         },
         {
@@ -2269,8 +2269,8 @@
                   "id": "src\\features\\About\\Nguyen-Minh-Khoi-CV.pdf",
                   "name": "Nguyen-Minh-Khoi-CV.pdf",
                   "type": "file",
-                  "size": "1044.1 KB",
-                  "date": "2026-01-30"
+                  "size": "1376.5 KB",
+                  "date": "2026-02-08"
                 },
                 {
                   "id": "src\\features\\About\\portrait.JPG",
@@ -2709,8 +2709,8 @@
       "id": "vite.config.js",
       "name": "vite.config.js",
       "type": "file",
-      "size": "1.0 KB",
-      "date": "2026-02-07"
+      "size": "1.1 KB",
+      "date": "2026-02-08"
     }
   ]
 }

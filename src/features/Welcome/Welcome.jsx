@@ -60,7 +60,7 @@ const WELCOME_CONTENT = {
       <p>
         Explore the available sections: "About Me" for my professional
         background and skills, "My Projects" to see my work, "My
-        Certificates" to view my achievements, and "My Contact" for ways
+        Certificates" to view my achievements, and "My Contacts" for ways
         to reach out. You can also use the "Message Me" program to send me
         a message directly.
       </p>
@@ -77,14 +77,14 @@ const WELCOME_CONTENT = {
       </p>
       <ul className="welcome-usage-list">
         <li>
-          <strong>Email:</strong> nguyenminhkhoi3913@gmail.com
+          <strong>Email:</strong> khoinm.business@gmail.com
         </li>
         <li>
           <strong>Message Me:</strong> Use the "Message Me" program icon on
           the desktop to send me a message directly through this interface
         </li>
         <li>
-          <strong>My Contact:</strong> Open the "My Contact" window for
+          <strong>My Contacts:</strong> Open the "My Contacts" window for
           additional contact information and links
         </li>
       </ul>

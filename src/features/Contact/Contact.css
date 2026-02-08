@@ -1,6 +1,7 @@
 .contact-container {
-  width: 26rem;
-  height: 15rem;
+  width: 32rem;
+  height: auto;
+  min-height: 15rem;
   padding: 16px;
 }
 
@@ -9,7 +10,15 @@
   padding-bottom: 16px;
   margin-bottom: 18px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 22px;
+}
+
+.contact-header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .contact-title-group {
@@ -18,12 +27,42 @@
 }
 
 .monogram {
-  width: 96px;
+  width: 112px;
+}
+
+.name {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--windows-black);
+  margin: 0 0 4px 0;
+}
+
+.title {
+  font-size: 18px;
+  color: var(--windows-blue);
+  margin: 0;
+}
+
+.folder-icon {
+  height: 18px;
+}
+
+.contact-qr-container {
+  padding: 4px;
+  background: white;
+}
+
+.qr-code {
+  width: 92px;
+  height: 92px;
+  display: block;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 .contact-info.phone-email {
@@ -33,6 +72,7 @@
 }
 
 .contact-info strong {
+  margin: 0;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -65,6 +105,24 @@
 @media (max-width: 768px) {
   .contact-container {
     width: auto;
+    min-height: unset;
+  }
+
+  .contact-title {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .contact-header-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .monogram {
+    width: 80px;
   }
 
   .contact-info.phone-email {

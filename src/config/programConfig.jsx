@@ -103,7 +103,7 @@ export const desktopItems = [
         iconSrc: logoIcon,
         type: "icon",
         isMaximizable: false,
-        link: "https://khonloi.github.io/hayami/",
+        link: "https://khoinm.vercel.app",
       },
       {
         id: "gash1",
@@ -125,7 +125,7 @@ export const desktopItems = [
   },
   {
     id: "contact",
-    label: "My Contact",
+    label: "My Contacts",
     iconSrc: cardIcon,
     type: "icon",
     isMaximizable: false,
