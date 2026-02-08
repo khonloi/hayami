@@ -2,13 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/retro-homepage/favicon.ico" />
-    <link rel="manifest" href="/retro-homepage/manifest.json" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hayami 3</title> 
-    <!-- Preload critical resources -->
-    <link rel="preload" href="/retro-homepage/assets/PixelOperator-C4gCAeI2.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/src/assets/fonts/PixelOperator-Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <!-- Fonts are handled via CSS for better bundling -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500&display=swap" rel="stylesheet">
@@ -23,9 +21,9 @@
         overflow: hidden;
       }
     </style>
-    <script type="module" crossorigin src="/retro-homepage/assets/index-BlUP_RCY.js"></script>
-    <link rel="modulepreload" crossorigin href="/retro-homepage/assets/vendor-Csw2ODfV.js">
-    <link rel="stylesheet" crossorigin href="/retro-homepage/assets/index-DMqyEVbG.css">
+    <script type="module" crossorigin src="/hayami/assets/index-eRhLiy33.js"></script>
+    <link rel="modulepreload" crossorigin href="/hayami/assets/vendor-react-Csw2ODfV.js">
+    <link rel="stylesheet" crossorigin href="/hayami/assets/index-Dn4MW0w8.css">
   </head>
   <body>
     <div id="root"></div>
@@ -33,7 +31,8 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
+          // Use relative path for sub-directory deployment
+          navigator.serviceWorker.register('./sw.js')
             .then((registration) => {
               console.log('SW registered: ', registration);
             })
