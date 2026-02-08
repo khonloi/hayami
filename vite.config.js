@@ -13,10 +13,11 @@ export default defineConfig({
         entryFileNames: 'assets/[name]-[hash].js',
         chunkFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
-        // Split vendor chunks for better caching
+        // Split vendor chunks for better caching and smaller sizes
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          three: ['three']
+          'vendor-react': ['react', 'react-dom'],
+          'vendor-utils': ['@emailjs/browser'],
+          'vendor-p5': ['p5']
         }
       }
     },
@@ -27,6 +28,6 @@ export default defineConfig({
   },
   // Optimize dependencies
   optimizeDeps: {
-    include: ['react', 'react-dom', 'three']
+    include: ['react', 'react-dom', 'p5']
   }
 });

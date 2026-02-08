@@ -1,11 +1,12 @@
 // Service Worker for caching
 const CACHE_NAME = 'hayami-v1';
 const urlsToCache = [
-  '/hayami/',
-  '/hayami/index.html',
-  '/hayami/assets/',
-  '/hayami/sounds/',
-  '/hayami/src/assets/'
+  './',
+  './index.html',
+  './manifest.json',
+  './favicon.ico',
+  './assets/',
+  './sounds/'
 ];
 
 // Install event - cache resources

@@ -1,11 +1,4 @@
-import About from "../features/About/About";
-import Contact from "../features/Contact/Contact";
-import Welcome from "../features/Welcome/Welcome";
-import Message from "../features/Message/Message";
-import StarShow from "../features/StarShow/StarShow";
-import VideoPlayer from "../features/VideoPlayer/VideoPlayer";
-import FileManager from "../features/FileManager/FileManager";
-
+import React, { lazy, Suspense } from "react";
 
 // Import your icons
 import logoIcon from "../assets/icons/Tree.ico";
@@ -322,6 +315,14 @@ export const desktopItems = [
   },
 ];
 
+// Lazy load components for better performance
+const About = lazy(() => import("../features/About/About"));
+const Contact = lazy(() => import("../features/Contact/Contact"));
+const Welcome = lazy(() => import("../features/Welcome/Welcome"));
+const Message = lazy(() => import("../features/Message/Message"));
+const StarShow = lazy(() => import("../features/StarShow/StarShow"));
+const VideoPlayer = lazy(() => import("../features/VideoPlayer/VideoPlayer"));
+
 import Dialog from "../components/Dialog";
 
 // Window content registry for better maintainability and performance
@@ -332,7 +333,6 @@ const windowContentRegistry = {
   message: Message,
   starshow: StarShow,
   video: VideoPlayer,
-  // fileManager: FileManager,
 };
 
 // Window content renderer function - optimized with registry lookup
