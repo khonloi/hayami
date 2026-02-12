@@ -195,6 +195,8 @@
     /* Move main-content first */
     padding: 16px;
     max-width: none;
+    overflow-y: visible;
+    /* Allow continuous scroll */
   }
 
   .skills-pane {
@@ -205,7 +207,8 @@
     border-right: none;
     border-top: 2px solid var(--button-border-dark);
     box-sizing: border-box;
-    height: 100vh;
+    overflow-y: visible;
+    /* Allow continuous scroll */
   }
 
   .skills-section::before,
