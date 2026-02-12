@@ -1,15 +1,26 @@
-.windows-window {
-  background-color: #fcfcfc;
+.window-outer {
+  background-color: var(--windows-bg);
   border: 2px solid var(--windows-black);
-  outline: 2px outset #c0c4c8;
-  box-shadow: 0 0 0 4px var(--windows-black);
   min-width: 320px;
   font-family: var(--main-font);
-
+  box-sizing: border-box;
   transform-origin: center center;
 }
 
-.windows-window:not(.opening) {
+.window-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--windows-white);
+  border-left: 2px solid var(--windows-white);
+  border-right: 2px solid var(--button-border-dark);
+  border-bottom: 2px solid var(--button-border-dark);
+  box-sizing: border-box;
+  padding: 2px;
+  background-color: var(--windows-bg);
+}
+
+.window-outer:not(.opening) {
   animation: none;
 }
 
@@ -23,7 +34,7 @@
   position: relative;
 }
 
-.windows-window.focused .window-title-bar {
+.window-outer.focused .window-inner .window-title-bar {
   background-color: var(--windows-purple);
   color: var(--windows-white);
 }
@@ -78,26 +89,39 @@
   border-top: 2px solid var(--button-border-dark);
 }
 
-.window-content {
-  border-top: 2px solid var(--windows-bg);
-  border-left: 2px solid var(--windows-bg);
+.window-content-outer {
+  border-left: 2px solid var(--button-border-dark);
+  border-top: 2px solid var(--button-border-dark);
+  border-right: 2px solid var(--windows-white);
+  border-bottom: 2px solid var(--windows-white);
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.window-content-inner {
+  border: 2px solid var(--windows-black);
+  background-color: #fcfcfc;
   overflow: auto;
+  flex: 1;
   user-select: text;
   -webkit-user-select: text;
   -moz-user-select: text;
   -ms-user-select: text;
+  display: flex;
+  flex-direction: column;
 }
 
-.window-content::-webkit-scrollbar {
+.window-content-inner::-webkit-scrollbar {
   width: 16px;
 }
 
-.window-content::-webkit-scrollbar-track {
+.window-content-inner::-webkit-scrollbar-track {
   background: var(--windows-bg);
   border: 1px inset var(--windows-bg);
 }
 
-.window-content::-webkit-scrollbar-thumb {
+.window-content-inner::-webkit-scrollbar-thumb {
   background: #808080;
   border: 1px outset #808080;
 }
@@ -106,7 +130,7 @@
   background: #909090;
 }
 
-.windows-window.dragging {
+.window-outer.dragging {
   user-select: none;
 }
 
@@ -118,29 +142,27 @@
   z-index: 10001;
 }
 
-.windows-window.opening .window-title-bar,
-.windows-window.opening .window-content {
+.window-outer.opening .window-inner .window-title-bar,
+.window-outer.opening .window-inner .window-content {
   visibility: hidden;
 }
 
-.windows-window.maximized {
-  background-color: #fcfcfc;
+.window-outer.maximized {
+  background-color: var(--windows-bg);
   box-sizing: border-box;
   border: 2px solid var(--windows-black);
-  outline: 2px outset #c0c4c8;
-  box-shadow: 0 0 0 4px var(--windows-black);
   width: 100vw !important;
   height: 100vh !important;
   top: 0 !important;
   left: 0 !important;
 }
 
-.windows-window.maximized .window-content {
+.window-outer.maximized .window-inner .window-content-inner {
   height: calc(100vh - 35px);
   overflow: auto;
 }
 
-.windows-window.minimized {
+.window-outer.minimized {
   visibility: hidden !important;
   pointer-events: none !important;
   position: absolute !important;
@@ -152,31 +174,38 @@
   pointer-events: none !important;
 }
 
-.windows-window.minimized .window-content {
+.window-outer.minimized .window-inner .window-content-outer {
   display: none !important;
 }
 
 /* Full-screen styles */
-.windows-window.fullscreen {
+.window-outer.fullscreen {
   width: 100vw !important;
   height: 100vh !important;
   top: 0 !important;
   left: 0 !important;
   z-index: 10000 !important;
   border: none;
-  outline: none;
-  box-shadow: none;
   background-color: #fcfcfc;
 }
 
-.windows-window.fullscreen .window-title-bar {
+.window-outer.fullscreen .window-inner {
+  border: none;
+}
+
+.window-outer.fullscreen .window-inner .window-title-bar {
   display: none;
 }
 
-.windows-window.fullscreen .window-content {
+.window-outer.fullscreen .window-inner .window-content-outer {
   height: 100vh !important;
   border: none;
   overflow: hidden;
+  padding: 0;
+}
+
+.window-outer.fullscreen .window-inner .window-content-inner {
+  border: none;
 }
 
 /* Touch-friendly improvements */

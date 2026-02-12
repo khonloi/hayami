@@ -60,7 +60,7 @@ const Window = memo(
       return (
         <div
           ref={elementRef}
-          className="windows-window minimized"
+          className="window-outer minimized"
           style={{
             position: "absolute",
             left: `${position.x}px`,
@@ -72,40 +72,46 @@ const Window = memo(
             pointerEvents: "none",
           }}
         >
-          <div className="window-title-bar">
-            <span className="window-title">{title}</span>
-            <div className="window-controls">
-              <button
-                className="window-button control-button"
-                onClick={handleCloseClick}
-                title="Close Window"
-                aria-label="Close Window"
-              >
-                ×
-              </button>
-              {!isMobile && isMaximizable && (
-                <button
-                  className="window-button control-button"
-                  onClick={handleMaximizeClick}
-                  title={isMaximized ? "Restore Window" : "Maximize Window"}
-                  aria-label={
-                    isMaximized ? "Restore Window" : "Maximize Window"
-                  }
-                >
-                  •
-                </button>
-              )}
-              <button
-                className="window-button control-button"
-                onClick={handleMinimizeClick}
-                title="Minimize Window"
-                aria-label="Minimize Window"
-              >
-                -
-              </button>
+          <div className="window-inner">
+            <div className="window-content-outer">
+              <div className="window-content-inner">
+                <div className="window-title-bar">
+                  <span className="window-title">{title}</span>
+                  <div className="window-controls">
+                    <button
+                      className="window-button control-button"
+                      onClick={handleCloseClick}
+                      title="Close Window"
+                      aria-label="Close Window"
+                    >
+                      ×
+                    </button>
+                    {!isMobile && isMaximizable && (
+                      <button
+                        className="window-button control-button"
+                        onClick={handleMaximizeClick}
+                        title={isMaximized ? "Restore Window" : "Maximize Window"}
+                        aria-label={
+                          isMaximized ? "Restore Window" : "Maximize Window"
+                        }
+                      >
+                        •
+                      </button>
+                    )}
+                    <button
+                      className="window-button control-button"
+                      onClick={handleMinimizeClick}
+                      title="Minimize Window"
+                      aria-label="Minimize Window"
+                    >
+                      -
+                    </button>
+                  </div>
+                </div>
+                {children}
+              </div>
             </div>
           </div>
-          <div className="window-content">{children}</div>
         </div>
       );
     }
@@ -145,48 +151,58 @@ const Window = memo(
       <>
         <div
           ref={elementRef}
-          className={`windows-window 
+          className={`window-outer 
         ${isFullScreenActive ? "fullscreen" : ""} 
         ${isMaximized || isMobile ? "maximized" : ""} 
         ${isFocused ? "focused" : ""}
         ${isDragging ? "dragging" : ""}`}
           style={windowStyle}
-          onMouseDown={handleTitleBarMouseDown}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={isFullScreenActive ? handleTouchEnd : undefined}
         >
-          <div className="window-title-bar">
-            <span className="window-title">{title}</span>
-            <div className="window-controls">
-              <button
-                className="window-button control-button"
-                onClick={handleCloseClick}
-                title="Close Window"
-                aria-label="Close Window"
-              >
-                ×
-              </button>
-              {!isMobile && isMaximizable && !isFullScreenActive && (
-                <button
-                  className="window-button control-button"
-                  onClick={handleMaximizeClick}
-                  title={isMaximized ? "Restore Window" : "Maximize Window"}
-                  aria-label={isMaximized ? "Restore Window" : "Maximize Window"}
-                >
-                  •
-                </button>
-              )}
-              <button
-                className="window-button control-button"
-                onClick={handleMinimizeClick}
-                title="Minimize Window"
-                aria-label="Minimize Window"
-              >
-                -
-              </button>
+          <div
+            className="window-inner"
+            onMouseDown={handleTitleBarMouseDown}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={isFullScreenActive ? handleTouchEnd : undefined}
+          >
+            <div className="window-content-outer">
+              <div className="window-content-inner">
+                <div className="window-title-bar">
+                  <span className="window-title">{title}</span>
+                  <div className="window-controls">
+                    <button
+                      className="window-button control-button"
+                      onClick={handleCloseClick}
+                      title="Close Window"
+                      aria-label="Close Window"
+                    >
+                      ×
+                    </button>
+                    {!isMobile && isMaximizable && !isFullScreenActive && (
+                      <button
+                        className="window-button control-button"
+                        onClick={handleMaximizeClick}
+                        title={isMaximized ? "Restore Window" : "Maximize Window"}
+                        aria-label={
+                          isMaximized ? "Restore Window" : "Maximize Window"
+                        }
+                      >
+                        •
+                      </button>
+                    )}
+                    <button
+                      className="window-button control-button"
+                      onClick={handleMinimizeClick}
+                      title="Minimize Window"
+                      aria-label="Minimize Window"
+                    >
+                      -
+                    </button>
+                  </div>
+                </div>
+                {children}
+              </div>
             </div>
           </div>
-          <div className="window-content">{children}</div>
         </div>
         {isDragging && !isMaximized && !isMobile && !isFullScreenActive && (
           <div

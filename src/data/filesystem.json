@@ -2027,7 +2027,7 @@
               "name": "DialogWindow.jsx",
               "type": "file",
               "size": "2.6 KB",
-              "date": "2026-01-25"
+              "date": "2026-02-10"
             },
             {
               "id": "src\\components\\DraggableItem.jsx",
@@ -2083,7 +2083,7 @@
               "name": "Window.jsx",
               "type": "file",
               "size": "6.0 KB",
-              "date": "2026-01-24"
+              "date": "2026-02-10"
             }
           ]
         },
@@ -2132,7 +2132,7 @@
               "name": "Dialog.css",
               "type": "file",
               "size": "0.7 KB",
-              "date": "2026-01-25"
+              "date": "2026-02-08"
             },
             {
               "id": "src\\css\\Explorer.css",
@@ -2153,7 +2153,7 @@
               "name": "LoadingScreen.css",
               "type": "file",
               "size": "2.1 KB",
-              "date": "2026-01-14"
+              "date": "2026-02-12"
             },
             {
               "id": "src\\css\\MenuBar.css",
@@ -2167,21 +2167,21 @@
               "name": "Taskbar.css",
               "type": "file",
               "size": "2.2 KB",
-              "date": "2026-01-24"
+              "date": "2026-02-10"
             },
             {
               "id": "src\\css\\variables.css",
               "name": "variables.css",
               "type": "file",
               "size": "1.5 KB",
-              "date": "2026-02-08"
+              "date": "2026-02-10"
             },
             {
               "id": "src\\css\\Window.css",
               "name": "Window.css",
               "type": "file",
               "size": "4.6 KB",
-              "date": "2026-01-25"
+              "date": "2026-02-12"
             }
           ]
         },
@@ -2201,8 +2201,8 @@
               "id": "src\\data\\filesystem.json",
               "name": "filesystem.json",
               "type": "file",
-              "size": "91.0 KB",
-              "date": "2026-02-08"
+              "size": "91.3 KB",
+              "date": "2026-02-10"
             },
             {
               "id": "src\\data\\skills.js",
@@ -2290,15 +2290,15 @@
                   "id": "src\\features\\Contact\\Contact.css",
                   "name": "Contact.css",
                   "type": "file",
-                  "size": "1.3 KB",
-                  "date": "2025-09-30"
+                  "size": "2.1 KB",
+                  "date": "2026-02-09"
                 },
                 {
                   "id": "src\\features\\Contact\\Contact.jsx",
                   "name": "Contact.jsx",
                   "type": "file",
-                  "size": "2.3 KB",
-                  "date": "2026-02-07"
+                  "size": "2.5 KB",
+                  "date": "2026-02-08"
                 },
                 {
                   "id": "src\\features\\Contact\\Microsoft Windows 3 International.ico",
@@ -2334,6 +2334,13 @@
                   "type": "file",
                   "size": "1.5 KB",
                   "date": "2025-08-25"
+                },
+                {
+                  "id": "src\\features\\Contact\\qrcode.png",
+                  "name": "qrcode.png",
+                  "type": "file",
+                  "size": "33.3 KB",
+                  "date": "2026-02-08"
                 }
               ]
             },
@@ -2536,7 +2543,7 @@
                   "name": "Welcome.jsx",
                   "type": "file",
                   "size": "4.9 KB",
-                  "date": "2026-02-07"
+                  "date": "2026-02-08"
                 }
               ]
             }
@@ -2688,8 +2695,8 @@
       "id": "package.json",
       "name": "package.json",
       "type": "file",
-      "size": "1.0 KB",
-      "date": "2026-02-07"
+      "size": "0.9 KB",
+      "date": "2026-02-08"
     },
     {
       "id": "README.md",

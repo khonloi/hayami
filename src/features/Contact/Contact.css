@@ -2,7 +2,7 @@
   width: 32rem;
   height: auto;
   min-height: 15rem;
-  padding: 16px;
+  padding: 16px 16px 0 16px;
 }
 
 .contact-title {
@@ -53,8 +53,8 @@
 }
 
 .qr-code {
-  width: 92px;
-  height: 92px;
+  width: 80px;
+  height: 80px;
   display: block;
 }
 
@@ -68,7 +68,6 @@
 .contact-info.phone-email {
   flex-direction: row;
   align-items: center;
-  margin-bottom: 18px;
 }
 
 .contact-info strong {

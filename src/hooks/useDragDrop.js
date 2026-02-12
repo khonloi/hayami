@@ -42,7 +42,7 @@ export const useDragDrop = (id, position, onPositionChange, onSelect, options = 
       const isTitleBar = target.closest(".window-title-bar");
 
       if (
-        elementRef.current.classList.contains("windows-window") &&
+        elementRef.current.classList.contains("window-outer") &&
         !isTitleBar
       ) {
         return;
@@ -75,7 +75,7 @@ export const useDragDrop = (id, position, onPositionChange, onSelect, options = 
       const newX = clientX - containerRect.left - dragOffset.x;
       const newY = clientY - containerRect.top - dragOffset.y;
 
-      const isWindow = elementRef.current.classList.contains("windows-window");
+      const isWindow = elementRef.current.classList.contains("window-outer");
       const elementWidth = isWindow ? elementRef.current.offsetWidth : 64;
       const elementHeight = isWindow ? elementRef.current.offsetHeight : 64;
 

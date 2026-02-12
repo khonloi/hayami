@@ -4,10 +4,10 @@ import { desktopItems } from "../config/programConfig";
 // Constants for positioning - extracted for better maintainability
 const POSITIONING_CONSTANTS = {
   EDGE_PADDING: 20,
-  EDGE_PADDING_RESIZE: 24,
-  ICON_SPACING: 92,
+  EDGE_PADDING_RESIZE: 20,
+  ICON_SPACING: 96,
   ICON_WIDTH: 80,
-  TOP_PADDING: 16,
+  TOP_PADDING: 20,
 };
 
 export const useDesktop = () => {
