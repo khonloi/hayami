@@ -89,8 +89,8 @@
           "id": "public\\sw.js",
           "name": "sw.js",
           "type": "file",
-          "size": "1.6 KB",
-          "date": "2026-02-08"
+          "size": "3.4 KB",
+          "date": "2026-02-14"
         },
         {
           "id": "public\\vite.svg",
@@ -2026,8 +2026,8 @@
               "id": "src\\components\\DialogWindow.jsx",
               "name": "DialogWindow.jsx",
               "type": "file",
-              "size": "2.6 KB",
-              "date": "2026-02-10"
+              "size": "2.9 KB",
+              "date": "2026-02-12"
             },
             {
               "id": "src\\components\\DraggableItem.jsx",
@@ -2061,8 +2061,8 @@
               "id": "src\\components\\LoadingScreen.jsx",
               "name": "LoadingScreen.jsx",
               "type": "file",
-              "size": "10.1 KB",
-              "date": "2026-02-07"
+              "size": "10.4 KB",
+              "date": "2026-02-12"
             },
             {
               "id": "src\\components\\MenuBar.jsx",
@@ -2082,8 +2082,8 @@
               "id": "src\\components\\Window.jsx",
               "name": "Window.jsx",
               "type": "file",
-              "size": "6.0 KB",
-              "date": "2026-02-10"
+              "size": "6.8 KB",
+              "date": "2026-02-12"
             }
           ]
         },
@@ -2124,8 +2124,8 @@
               "id": "src\\css\\Desktop.css",
               "name": "Desktop.css",
               "type": "file",
-              "size": "0.5 KB",
-              "date": "2025-12-28"
+              "size": "0.4 KB",
+              "date": "2026-02-12"
             },
             {
               "id": "src\\css\\Dialog.css",
@@ -2152,7 +2152,7 @@
               "id": "src\\css\\LoadingScreen.css",
               "name": "LoadingScreen.css",
               "type": "file",
-              "size": "2.1 KB",
+              "size": "2.6 KB",
               "date": "2026-02-12"
             },
             {
@@ -2180,7 +2180,7 @@
               "id": "src\\css\\Window.css",
               "name": "Window.css",
               "type": "file",
-              "size": "4.6 KB",
+              "size": "5.4 KB",
               "date": "2026-02-12"
             }
           ]
@@ -2201,8 +2201,8 @@
               "id": "src\\data\\filesystem.json",
               "name": "filesystem.json",
               "type": "file",
-              "size": "91.3 KB",
-              "date": "2026-02-10"
+              "size": "91.4 KB",
+              "date": "2026-02-14"
             },
             {
               "id": "src\\data\\skills.js",
@@ -2234,8 +2234,8 @@
                   "id": "src\\features\\About\\About.css",
                   "name": "About.css",
                   "type": "file",
-                  "size": "3.7 KB",
-                  "date": "2026-01-25"
+                  "size": "3.8 KB",
+                  "date": "2026-02-12"
                 },
                 {
                   "id": "src\\features\\About\\About.jsx",
@@ -2291,7 +2291,7 @@
                   "name": "Contact.css",
                   "type": "file",
                   "size": "2.1 KB",
-                  "date": "2026-02-09"
+                  "date": "2026-02-12"
                 },
                 {
                   "id": "src\\features\\Contact\\Contact.jsx",
@@ -2566,14 +2566,14 @@
               "name": "useDesktop.js",
               "type": "file",
               "size": "3.5 KB",
-              "date": "2025-12-11"
+              "date": "2026-02-12"
             },
             {
               "id": "src\\hooks\\useDragDrop.js",
               "name": "useDragDrop.js",
               "type": "file",
               "size": "6.3 KB",
-              "date": "2026-01-16"
+              "date": "2026-02-12"
             },
             {
               "id": "src\\hooks\\useLoadingScreen.js",
@@ -2688,8 +2688,8 @@
       "id": "index.html",
       "name": "index.html",
       "type": "file",
-      "size": "1.4 KB",
-      "date": "2026-02-08"
+      "size": "2.9 KB",
+      "date": "2026-02-14"
     },
     {
       "id": "package.json",
@@ -2704,6 +2704,13 @@
       "type": "file",
       "size": "0.8 KB",
       "date": "2025-08-25"
+    },
+    {
+      "id": "SERVICE_WORKER_FIX.md",
+      "name": "SERVICE_WORKER_FIX.md",
+      "type": "file",
+      "size": "3.3 KB",
+      "date": "2026-02-14"
     },
     {
       "id": "usage.txt",

@@ -25,18 +25,48 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <!-- Service Worker Registration -->
+    <!-- Service Worker Registration with Update Detection -->
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           // Use relative path for sub-directory deployment
           navigator.serviceWorker.register('./sw.js')
             .then((registration) => {
-              console.log('SW registered: ', registration);
+              console.log('[App] SW registered:', registration);
+              
+              // Check for updates periodically (every 60 seconds)
+              setInterval(() => {
+                registration.update();
+              }, 60000);
+              
+              // Handle updates
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                console.log('[App] New service worker found, installing...');
+                
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    // New service worker available, reload to activate
+                    console.log('[App] New version available! Reloading...');
+                    
+                    // Tell the new SW to skip waiting
+                    newWorker.postMessage({ type: 'SKIP_WAITING' });
+                    
+                    // Reload the page to use the new version
+                    window.location.reload();
+                  }
+                });
+              });
             })
             .catch((registrationError) => {
-              console.log('SW registration failed: ', registrationError);
+              console.log('[App] SW registration failed:', registrationError);
             });
+          
+          // Handle controller change (when new SW takes over)
+          navigator.serviceWorker.addEventListener('controllerchange', () => {
+            console.log('[App] Service worker controller changed, reloading...');
+            window.location.reload();
+          });
         });
       }
     </script>
