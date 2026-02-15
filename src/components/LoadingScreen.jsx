@@ -248,18 +248,22 @@ const LoadingScreen = ({
         <div className="loading-screen">
           <div className="loading-outer">
             <div className="loading-inner">
-              <div className="loading-content">
-                <div className="startup-card-container">
-                  <img
-                    src={startupCard}
-                    alt="Startup Card"
-                    className="startup-card"
-                  />
-                </div>
-                <div className="loading-status">
-                  <p className="loading-text">Shutting down</p>
+              <div className="loading-inner-layer-1">
+                <div className="loading-content">
+                  <div className="startup-card-container">
+                    <img src={startupCard} alt="Startup Card" className="startup-card" />
+                  </div>
+                  <div className="loading-status">
+                    <p className="loading-text">{mode === 'shutdown' ? 'Shutting down' : 'Starting up'}</p>
+                    {mode === 'loading' && (
+                      <div className="progress-bar">
+                        <div className="progress" style={{ width: `${progress}%` }}></div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
+              <div className="loading-inner-layer-2"></div>
             </div>
           </div>
         </div>
@@ -341,17 +345,20 @@ const LoadingScreen = ({
     <div className="loading-screen">
       <div className="loading-outer">
         <div className="loading-inner">
-          <div className="loading-content">
-            <div className="startup-card-container">
-              <img src={startupCard} alt="Startup Card" className="startup-card" />
-            </div>
-            <div className="loading-status">
-              <p className="loading-text">Starting up</p>
-              <div className="progress-bar">
-                <div className="progress" style={{ width: `${progress}%` }}></div>
+          <div className="loading-inner-layer-1">
+            <div className="loading-content">
+              <div className="startup-card-container">
+                <img src={startupCard} alt="Startup Card" className="startup-card" />
+              </div>
+              <div className="loading-status">
+                <p className="loading-text">Starting up</p>
+                <div className="progress-bar">
+                  <div className="progress" style={{ width: `${progress}%` }}></div>
+                </div>
               </div>
             </div>
           </div>
+          <div className="loading-inner-layer-2"></div>
         </div>
       </div>
     </div>

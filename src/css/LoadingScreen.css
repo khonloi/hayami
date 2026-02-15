@@ -24,15 +24,33 @@
 
 .loading-inner {
   height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.loading-inner-layer-1 {
+  height: 100%;
   display: flex;
   flex-direction: column;
   border-top: 2px solid var(--windows-white);
   border-left: 2px solid var(--windows-white);
+  box-sizing: border-box;
+  padding: 2px 4px 4px 2px;
+  background-color: var(--windows-bg);
+  z-index: 1;
+}
+
+.loading-inner-layer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
   border-right: 2px solid var(--button-border-dark);
   border-bottom: 2px solid var(--button-border-dark);
+  z-index: 2;
   box-sizing: border-box;
-  padding: 2px;
-  background-color: var(--windows-bg);
 }
 
 .loading-content {

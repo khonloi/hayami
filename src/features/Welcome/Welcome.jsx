@@ -132,7 +132,8 @@ const Welcome = memo(() => {
               className="welcome-menu-item window-button program-button"
               onClick={() => handleSectionChange(item.id)}
             >
-              {item.label}
+              <div className="window-button-layer-1">{item.label}</div>
+              <div className="window-button-layer-2"></div>
             </button>
           ))}
         </div>

@@ -37,7 +37,8 @@ const Dialog = ({
                                     className="window-button program-button"
                                     onClick={btn.onClick}
                                 >
-                                    {btn.label}
+                                    <div className="window-button-layer-1">{btn.label}</div>
+                                    <div className="window-button-layer-2"></div>
                                 </button>
                             ))}
                         </div>

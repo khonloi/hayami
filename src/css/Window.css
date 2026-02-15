@@ -9,15 +9,33 @@
 
 .window-inner {
   height: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.window-inner-layer-1 {
+  height: 100%;
   display: flex;
   flex-direction: column;
   border-top: 2px solid var(--windows-white);
   border-left: 2px solid var(--windows-white);
+  box-sizing: border-box;
+  padding: 2px 4px 4px 2px;
+  background-color: var(--windows-bg);
+  z-index: 1;
+}
+
+.window-inner-layer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
   border-right: 2px solid var(--button-border-dark);
   border-bottom: 2px solid var(--button-border-dark);
+  z-index: 2;
   box-sizing: border-box;
-  padding: 2px;
-  background-color: var(--windows-bg);
 }
 
 .window-outer:not(.opening) {
@@ -52,20 +70,43 @@
 }
 
 .window-button {
+  all: unset;
+  display: inline-flex;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px var(--windows-black);
+  color: var(--windows-black);
   background-color: var(--windows-bg);
-  border-right: 2px solid var(--button-border-dark);
-  border-bottom: 2px solid var(--button-border-dark);
+}
+
+.window-button-layer-1 {
   border-left: 2px solid var(--button-border-light);
   border-top: 2px solid var(--button-border-light);
-  box-shadow: 0 0 0 2px var(--windows-black);
-  font-size: 16px;
-  padding: 1px 10px 2px;
-  font-weight: bold;
+  padding: 0 2px 2px 0;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--windows-black);
-  font-family: var(--main-font);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.window-button-layer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  border-right: 2px solid var(--button-border-dark);
+  border-bottom: 2px solid var(--button-border-dark);
+  z-index: 2;
+  box-sizing: border-box;
 }
 
 .control-button {
@@ -73,7 +114,8 @@
   height: 32px;
   font-weight: normal;
   font-family: var(--button-font);
-  font-size: 32px;
+  font-size: 28px;
+  line-height: 1;
 }
 
 .program-button {
@@ -82,21 +124,51 @@
   font-weight: normal;
 }
 
-.window-button:active {
-  border-right: none;
-  border-bottom: none;
+.program-button .window-button-layer-1 {
+  padding: 0px 10px 2px;
+}
+
+.window-button:active .window-button-layer-1 {
   border-left: 2px solid var(--button-border-dark);
   border-top: 2px solid var(--button-border-dark);
+  padding: 2px 9px 1px 11px;
+}
+
+.window-button:active .window-button-layer-2 {
+  display: none;
 }
 
 .window-content-outer {
-  border-left: 2px solid var(--button-border-dark);
-  border-top: 2px solid var(--button-border-dark);
-  border-right: 2px solid var(--windows-white);
-  border-bottom: 2px solid var(--windows-white);
   flex: 1;
   display: flex;
   min-height: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.window-content-outer-layer-1 {
+  border-left: 2px solid var(--button-border-dark);
+  border-top: 2px solid var(--button-border-dark);
+  flex: 1;
+  display: flex;
+  min-height: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding-right: 2px;
+  padding-bottom: 2px;
+}
+
+.window-content-outer-layer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  border-right: 2px solid var(--windows-white);
+  border-bottom: 2px solid var(--windows-white);
+  z-index: 2;
+  box-sizing: border-box;
 }
 
 .window-content-inner {
@@ -188,7 +260,8 @@
   background-color: #fcfcfc;
 }
 
-.window-outer.fullscreen .window-inner {
+.window-outer.fullscreen .window-inner-layer-1,
+.window-outer.fullscreen .window-inner-layer-2 {
   border: none;
 }
 
@@ -196,11 +269,9 @@
   display: none;
 }
 
-.window-outer.fullscreen .window-inner .window-content-outer {
-  height: 100vh !important;
+.window-outer.fullscreen .window-content-outer-layer-1,
+.window-outer.fullscreen .window-content-outer-layer-2 {
   border: none;
-  overflow: hidden;
-  padding: 0;
 }
 
 .window-outer.fullscreen .window-inner .window-content-inner {
@@ -226,16 +297,21 @@
 
 .window-controls .window-button.control-button:first-child {
   background-color: #ff746d;
-  border-right: 2px solid #c94a3a;
-  border-bottom: 2px solid #c94a3a;
+}
+
+.window-controls .window-button.control-button:first-child .window-button-layer-1 {
   border-left: 2px solid #ffb3a7;
   border-top: 2px solid #ffb3a7;
+  padding: 0 2px 2px 0;
   color: #fff;
 }
 
-.window-controls .window-button.control-button:first-child:active {
-  border-right: none;
-  border-bottom: none;
+.window-controls .window-button.control-button:first-child .window-button-layer-2 {
+  border-right: 2px solid #c94a3a;
+  border-bottom: 2px solid #c94a3a;
+}
+
+.window-controls .window-button.control-button:first-child:active .window-button-layer-1 {
   border-left: 2px solid #c94a3a;
   border-top: 2px solid #c94a3a;
 }

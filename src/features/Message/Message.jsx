@@ -43,7 +43,8 @@ const Message = memo(({ onClose }) => {
             className="window-button program-button"
             disabled={isSending}
           >
-            Send
+            <div className="window-button-layer-1">Send</div>
+            <div className="window-button-layer-2"></div>
           </button>
           {status && <p className="status-message">{status}</p>}
         </div>

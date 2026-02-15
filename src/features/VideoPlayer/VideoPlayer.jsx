@@ -121,13 +121,16 @@ const VideoPlayer = memo(() => {
                 <div className="controls-bottom-row">
                     <div className="buttons-section">
                         <button onClick={togglePlay} className="window-button program-button">
-                            {isPlaying ? "Pause" : "Play"}
+                            <div className="window-button-layer-1">{isPlaying ? "Pause" : "Play"}</div>
+                            <div className="window-button-layer-2"></div>
                         </button>
                         <button onClick={stopVideo} className="window-button program-button">
-                            Stop
+                            <div className="window-button-layer-1">Stop</div>
+                            <div className="window-button-layer-2"></div>
                         </button>
                         <button onClick={handleImport} className="window-button program-button">
-                            Import
+                            <div className="window-button-layer-1">Import</div>
+                            <div className="window-button-layer-2"></div>
                         </button>
                     </div>
                     <div className="time-display">

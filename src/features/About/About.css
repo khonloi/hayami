@@ -2,6 +2,8 @@
   display: flex;
   height: 35rem;
   width: 47rem;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .skills-pane {
@@ -183,32 +185,28 @@
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    /* Allow height to adjust naturally */
-    overflow-y: auto;
-    /* Single scrollable area */
+    overflow: visible;
   }
 
   .main-content {
     order: 1;
-    /* Move main-content first */
     padding: 16px;
+    width: 100%;
     max-width: none;
+    box-sizing: border-box;
     overflow-y: visible;
-    /* Allow continuous scroll */
   }
 
   .skills-pane {
     order: 2;
-    /* Move skills-pane below main-content */
     width: 100%;
     max-width: none;
     border-right: none;
     border-top: 2px solid var(--button-border-dark);
     box-sizing: border-box;
     overflow-y: visible;
-    /* Allow continuous scroll */
   }
 
   .skills-section::before,
@@ -221,7 +219,20 @@
   }
 
   .header {
-    align-items: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-group {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .header .window-button {
+    margin-left: unset !important;
   }
 
   .portrait-image {

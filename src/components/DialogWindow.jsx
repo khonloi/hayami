@@ -85,24 +85,31 @@ const DialogWindow = memo(({
         onMouseDown={handleTitleBarMouseDown}
         onTouchStart={handleTitleBarTouchStart}
       >
-        <div className="window-content-outer">
-          <div className="window-content-inner">
-            <div className="window-title-bar">
-              <span className="window-title">{title}</span>
-              <div className="window-controls">
-                <button
-                  className="window-button control-button"
-                  onClick={handleCloseClick}
-                  title="Close Window"
-                  aria-label="Close Window"
-                >
-                  ×
-                </button>
+        <div className="window-inner-layer-1">
+          <div className="window-content-outer">
+            <div className="window-content-outer-layer-1">
+              <div className="window-content-inner">
+                <div className="window-title-bar">
+                  <span className="window-title">{title}</span>
+                  <div className="window-controls">
+                    <button
+                      className="window-button control-button"
+                      onClick={handleCloseClick}
+                      title="Close Window"
+                      aria-label="Close Window"
+                    >
+                      <div className="window-button-layer-1">×</div>
+                      <div className="window-button-layer-2"></div>
+                    </button>
+                  </div>
+                </div>
+                {children}
               </div>
             </div>
-            {children}
+            <div className="window-content-outer-layer-2"></div>
           </div>
         </div>
+        <div className="window-inner-layer-2"></div>
       </div>
     </div>
   );

@@ -95,7 +95,8 @@ const About = memo(() => {
             style={{ marginLeft: 'auto' }}
             onClick={handleExport}
           >
-            Export
+            <div className="window-button-layer-1">Export</div>
+            <div className="window-button-layer-2"></div>
           </button>
         </div>
 
