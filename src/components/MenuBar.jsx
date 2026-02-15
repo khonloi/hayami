@@ -7,6 +7,15 @@ import keyGrayIcon from "../assets/icons/Microsoft Windows 3 Keys.ico";
 const MenuBar = ({ visible = true, onShutdown }) => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [showShutdownDialog, setShowShutdownDialog] = useState(false);
+  const [shutdownMessage, setShutdownMessage] = useState("");
+
+  // Poetic shutdown messages
+  const shutdownMessages = [
+    "Will you finally let the tide pull you under?",
+    "Are you ready to exhale for the last time?",
+    "Shall we erase the ink from the skin?",
+    "Do you wish to come in from the cold?"
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -34,6 +43,9 @@ const MenuBar = ({ visible = true, onShutdown }) => {
   };
 
   const handleShutdownClick = () => {
+    // Pick a random shutdown message
+    const randomMessage = shutdownMessages[Math.floor(Math.random() * shutdownMessages.length)];
+    setShutdownMessage(randomMessage);
     setShowShutdownDialog(true);
   };
 
@@ -66,7 +78,7 @@ const MenuBar = ({ visible = true, onShutdown }) => {
         id="shutdown-dialog"
         isVisible={showShutdownDialog}
         title="Exit Session"
-        message="Do you want to end your Pane?"
+        message={shutdownMessage}
         icon={monitorMoonIcon}
         onClose={handleCloseShutdownDialog}
         buttons={[
