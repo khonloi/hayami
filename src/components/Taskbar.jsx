@@ -14,26 +14,32 @@ const Taskbar = memo(({ minimizedWindows, onRestore, isCollapsed, onToggleCollap
         {!isCollapsed && minimizedWindows.map((window) => (
           <button
             key={window.id}
-            className="taskbar-item"
+            className="window-button taskbar-item"
             onClick={() => onRestore(window.id)}
             title={`Restore ${window.title}`}
           >
-            {window.icon && (
-              <img 
-                src={window.icon} 
-                alt="" 
-                className="taskbar-icon"
-              />
-            )}
+            <div className="window-button-layer-1">
+              {window.icon && (
+                <img
+                  src={window.icon}
+                  alt=""
+                  className="taskbar-icon"
+                />
+              )}
+            </div>
+            <div className="window-button-layer-2"></div>
           </button>
         ))}
       </div>
       <button
-        className="taskbar-collapse-btn"
+        className="window-button taskbar-collapse-btn"
         onClick={onToggleCollapse}
         title={isCollapsed ? "Expand Taskbar" : "Collapse Taskbar"}
       >
-        {isCollapsed ? ">" : "<"}
+        <div className="window-button-layer-1">
+          {isCollapsed ? ">" : "<"}
+        </div>
+        <div className="window-button-layer-2"></div>
       </button>
     </div>
   );

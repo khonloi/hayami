@@ -30,14 +30,14 @@
   width: 112px;
 }
 
-.name {
+.contact-container .name {
   font-size: 28px;
   font-weight: bold;
   color: var(--windows-black);
   margin: 0 0 4px 0;
 }
 
-.title {
+.contact-container .title {
   font-size: 18px;
   color: var(--windows-blue);
   margin: 0;

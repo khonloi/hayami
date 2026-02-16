@@ -20,7 +20,7 @@
   border-top: 2px solid var(--windows-white);
   border-left: 2px solid var(--windows-white);
   box-sizing: border-box;
-  padding: 2px 4px 4px 2px;
+  padding: 4px 6px 6px 4px;
   background-color: var(--windows-bg);
   z-index: 1;
 }
@@ -44,12 +44,13 @@
 
 .window-title-bar {
   background-color: var(--windows-bg);
-  border-bottom: 2px solid var(--windows-black);
+  border: 2px solid var(--windows-black);
   color: var(--windows-black);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  margin-bottom: 5px;
 }
 
 .window-outer.focused .window-inner .window-title-bar {
@@ -114,7 +115,7 @@
   height: 32px;
   font-weight: normal;
   font-family: var(--button-font);
-  font-size: 28px;
+  font-size: 32px;
   line-height: 1;
 }
 
@@ -302,7 +303,6 @@
 .window-controls .window-button.control-button:first-child .window-button-layer-1 {
   border-left: 2px solid #ffb3a7;
   border-top: 2px solid #ffb3a7;
-  padding: 0 2px 2px 0;
   color: #fff;
 }
 

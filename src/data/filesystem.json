@@ -2019,15 +2019,15 @@
               "id": "src\\components\\Dialog.jsx",
               "name": "Dialog.jsx",
               "type": "file",
-              "size": "1.7 KB",
-              "date": "2026-01-25"
+              "size": "1.8 KB",
+              "date": "2026-02-15"
             },
             {
               "id": "src\\components\\DialogWindow.jsx",
               "name": "DialogWindow.jsx",
               "type": "file",
-              "size": "2.9 KB",
-              "date": "2026-02-12"
+              "size": "3.3 KB",
+              "date": "2026-02-15"
             },
             {
               "id": "src\\components\\DraggableItem.jsx",
@@ -2061,15 +2061,15 @@
               "id": "src\\components\\LoadingScreen.jsx",
               "name": "LoadingScreen.jsx",
               "type": "file",
-              "size": "10.4 KB",
-              "date": "2026-02-12"
+              "size": "10.9 KB",
+              "date": "2026-02-15"
             },
             {
               "id": "src\\components\\MenuBar.jsx",
               "name": "MenuBar.jsx",
               "type": "file",
-              "size": "2.5 KB",
-              "date": "2026-01-25"
+              "size": "2.9 KB",
+              "date": "2026-02-14"
             },
             {
               "id": "src\\components\\Taskbar.jsx",
@@ -2082,8 +2082,8 @@
               "id": "src\\components\\Window.jsx",
               "name": "Window.jsx",
               "type": "file",
-              "size": "6.8 KB",
-              "date": "2026-02-12"
+              "size": "8.4 KB",
+              "date": "2026-02-15"
             }
           ]
         },
@@ -2152,8 +2152,8 @@
               "id": "src\\css\\LoadingScreen.css",
               "name": "LoadingScreen.css",
               "type": "file",
-              "size": "2.6 KB",
-              "date": "2026-02-12"
+              "size": "2.9 KB",
+              "date": "2026-02-15"
             },
             {
               "id": "src\\css\\MenuBar.css",
@@ -2180,8 +2180,8 @@
               "id": "src\\css\\Window.css",
               "name": "Window.css",
               "type": "file",
-              "size": "5.4 KB",
-              "date": "2026-02-12"
+              "size": "6.9 KB",
+              "date": "2026-02-15"
             }
           ]
         },
@@ -2201,8 +2201,8 @@
               "id": "src\\data\\filesystem.json",
               "name": "filesystem.json",
               "type": "file",
-              "size": "91.4 KB",
-              "date": "2026-02-14"
+              "size": "94.1 KB",
+              "date": "2026-02-15"
             },
             {
               "id": "src\\data\\skills.js",
@@ -2234,15 +2234,15 @@
                   "id": "src\\features\\About\\About.css",
                   "name": "About.css",
                   "type": "file",
-                  "size": "3.8 KB",
-                  "date": "2026-02-12"
+                  "size": "3.9 KB",
+                  "date": "2026-02-15"
                 },
                 {
                   "id": "src\\features\\About\\About.jsx",
                   "name": "About.jsx",
                   "type": "file",
-                  "size": "7.5 KB",
-                  "date": "2026-01-30"
+                  "size": "7.6 KB",
+                  "date": "2026-02-15"
                 },
                 {
                   "id": "src\\features\\About\\Microsoft Windows 3 Documents.ico",
@@ -2395,8 +2395,8 @@
                   "id": "src\\features\\Message\\Message.jsx",
                   "name": "Message.jsx",
                   "type": "file",
-                  "size": "1.8 KB",
-                  "date": "2025-12-11"
+                  "size": "1.9 KB",
+                  "date": "2026-02-15"
                 }
               ]
             },
@@ -2521,8 +2521,8 @@
                   "id": "src\\features\\VideoPlayer\\VideoPlayer.jsx",
                   "name": "VideoPlayer.jsx",
                   "type": "file",
-                  "size": "5.2 KB",
-                  "date": "2026-01-17"
+                  "size": "5.6 KB",
+                  "date": "2026-02-15"
                 }
               ]
             },
@@ -2542,8 +2542,8 @@
                   "id": "src\\features\\Welcome\\Welcome.jsx",
                   "name": "Welcome.jsx",
                   "type": "file",
-                  "size": "4.9 KB",
-                  "date": "2026-02-08"
+                  "size": "5.0 KB",
+                  "date": "2026-02-15"
                 }
               ]
             }
@@ -2704,13 +2704,6 @@
       "type": "file",
       "size": "0.8 KB",
       "date": "2025-08-25"
-    },
-    {
-      "id": "SERVICE_WORKER_FIX.md",
-      "name": "SERVICE_WORKER_FIX.md",
-      "type": "file",
-      "size": "3.3 KB",
-      "date": "2026-02-14"
     },
     {
       "id": "usage.txt",

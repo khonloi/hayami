@@ -23,24 +23,16 @@
 }
 
 .taskbar-item {
-  background-color: var(--windows-bg);
-  border-left: 2px solid var(--button-border-light);
-  border-top: 2px solid var(--button-border-light);
-  border-right: 2px solid var(--button-border-dark);
-  border-bottom: 2px solid var(--button-border-dark);
-  box-shadow: 0 0 0 2px var(--windows-black);
   width: 36px;
   height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.taskbar-item:active {
-  border-left: 2px solid var(--button-border-dark);
-  border-top: 2px solid var(--button-border-dark);
-  border-right: none;
-  border-bottom: none;
+.taskbar-item .window-button-layer-1 {
+  padding: 0 2px 2px 0;
+}
+
+.taskbar-item:active .window-button-layer-1 {
+  padding: 2px 0 0 2px;
 }
 
 .taskbar-icon {
@@ -49,28 +41,20 @@
 }
 
 .taskbar-collapse-btn {
-  background-color: var(--windows-bg);
-  border-left: 2px solid var(--button-border-light);
-  border-top: 2px solid var(--button-border-light);
-  border-right: 2px solid var(--button-border-dark);
-  border-bottom: 2px solid var(--button-border-dark);
-  box-shadow: 0 0 0 2px var(--windows-black);
   height: 36px;
   width: 26px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: var(--button-font);
   font-size: 28px;
   color: var(--windows-black);
   margin-left: 12px;
 }
 
-.taskbar-collapse-btn:active {
-  border-left: 2px solid var(--button-border-dark);
-  border-top: 2px solid var(--button-border-dark);
-  border-right: none;
-  border-bottom: none;
+.taskbar-collapse-btn .window-button-layer-1 {
+  padding: 0 2px 2px 0;
+}
+
+.taskbar-collapse-btn:active .window-button-layer-1 {
+  padding: 2px 0 0 2px;
 }
 
 .taskbar.collapsed .taskbar-collapse-btn {
